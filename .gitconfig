@@ -1,0 +1,10 @@
+[user]
+	email = kenjitheman@proton.me
+	name = kenjitheman
+[github]
+	user = kenjitheman
+[credential]
+	helper = cache
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
