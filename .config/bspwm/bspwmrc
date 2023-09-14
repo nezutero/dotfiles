@@ -1,17 +1,19 @@
 #! /bin/sh
 
-# Start applications from ~/.local/bin/autostart
-autostart &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
-# bspwm settings
-bspc monitor eDP1 -d 1 2 3 4 &
-bspc config window_gap 20
-bspc config border_width 2
-bspc config normal_border_color "#313244"
-bspc config focused_border_color "#7f849c"
+bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config split_ratio 0.52
-bspc config borderless_monocle true
-bspc config gapless_monocle true
+bspc config border_width         2
+bspc config window_gap					 5
 
-bspc rule -a Zathura state=tiled
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# autostart applications
+sxhkd &
+picom --config $HOME/.config/picom/picom.conf &
+nitrogen --restore &
+dunst &
+polybar &
