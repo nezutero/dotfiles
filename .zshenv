@@ -3,7 +3,7 @@ export PATH=/home/kenjitheman/.local/bin:$PATH
 
 # default apps
 export EDITOR="nvim"
-export TERMINAL="Kitty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 
 # cleaning up home folder
