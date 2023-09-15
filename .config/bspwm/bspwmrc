@@ -2,7 +2,7 @@
 
 sxhkd &
 
-bspc monitor -d I II III IV V VI
+bspc monitor -d I II III IV V VI VII
 
 bspc config border_width         2
 bspc config window_gap					 6
@@ -16,3 +16,6 @@ picom --config $HOME/.config/picom/picom.conf &
 nitrogen --restore &
 dunst &
 polybar &
+
+# Set monitor resolution and refresh rate
+xrandr --output eDP-1 --mode 1920x1080 --rate 144
