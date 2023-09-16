@@ -106,7 +106,7 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
-alias micvolume='pactl set-source-volume "alsa_input.pci-0000_00_1f.3.analog-stereo"'
+alias c='clear'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
