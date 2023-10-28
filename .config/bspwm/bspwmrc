@@ -12,8 +12,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #autostart
-picom --config $HOME/.config/picom/picom.conf &
-feh --bg-fill /home/kenjitheman/walls/toxicman.png &
+# picom --config home/.config/picom/picom.conf &
+# feh --bg-fill /home/kenjitheman/walls/toxicman.png &
 dunst &
 polybar &
 

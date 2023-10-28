@@ -10,6 +10,18 @@ super + Return
 super + @space
 	dmenu_run
 
+# firefox
+super + f
+	firefox
+
+# telegram
+super + t
+    telegram-desktop
+
+# pavucontrol
+super + p
+    pavucontrol
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -119,7 +131,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# firefox
-super + f
-	firefox
