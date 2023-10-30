@@ -119,7 +119,9 @@ alias gpl='git pull'
 alias gps='git push'
 alias gcl='git clone'
 
-alias f='fzf'
+alias f='/home/kenjitheman/projs/dotfiles/scripts/fzfman.sh'
+
+alias cht='/home/kenjitheman/projs/dotfiles/scripts/chtman.sh'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
