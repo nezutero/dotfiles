@@ -106,6 +106,21 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
+alias c='clear'
+alias gtp='cd /home/kenjitheman/projs && clear && ls -a'
+
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gcb='git checkout -b'
+alias gpl='git pull'
+alias gps='git push'
+alias gcl='git clone'
+
+alias f='fzf'
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 source $ZSH/ zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
