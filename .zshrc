@@ -120,6 +120,7 @@ alias gco='git checkout'
 alias gpl='git pull'
 alias gps='git push'
 alias gcl='git clone'
+alias gbd='git branch -D'
 
 alias f='/home/kenjitheman/projs/dotfiles/scripts/fzfman.sh'
 
