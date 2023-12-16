@@ -14,10 +14,6 @@ super + @space
 super + f
 	firefox
 
-# telegram
-super + t
-    telegram-desktop
-
 # pavucontrol
 super + p
     pavucontrol
