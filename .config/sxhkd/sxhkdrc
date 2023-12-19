@@ -42,6 +42,18 @@ super + Escape
 super + shift + s
     scrot -s -e 'mv $f ~/pics/screenshots/ ' && notify-send "screenshot taken, saved to ~/pics/screenshots/"
 
+# switch to English layout
+alt + e
+    setxkbmap us
+
+# switch to Ukrainian layout
+alt + u
+    setxkbmap ua
+
+# switch to Russian layout
+alt + r
+    setxkbmap ru
+
 #
 # bspwm hotkeys
 #
