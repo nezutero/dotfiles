@@ -28,11 +28,11 @@ super + d
 
 # file manager
 super + e
-    alacritty -e mc
+    alacritty -e lf
 
-# sudo thunar
+# sudo file manager
 super + shift + e
-    alacritty -e sudo mc
+    alacritty -e sudo lf
 
 # make sxhkd reload its configuration files:
 super + Escape
