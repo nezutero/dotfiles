@@ -1,0 +1,96 @@
+# Basic Settings
+set hidden true
+set ignorecase true
+
+# Custom Functions
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+# Trash bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+# Delete Bindings
+cmd rm ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+# Bindings
+map d
+map m
+
+map v $nvim "$f"
+
+map au unarchive
+
+# Basic Functions
+map . set hidden!
+map dd tra
+map dr restore_trash
+map D rm
+map p paste
+map x cut
+map y copy
+map <enter> open
+map R reload
+map % mkfile
+map d mkdir
+map C clear
+map :q quit
+map :w save
+map :wq save quit
+
+# Movement
+map gD cd ~/docs
+map gd cd ~/Downloads
+map gp cd ~/pics
+map gc cd ~/.config
+map gp cd ~/projs
+map gv cd ~/Videos
+map gs cd ~/.local/bin
+map gt cd ~/.local/share/Trash/files/
