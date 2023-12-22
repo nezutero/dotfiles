@@ -5,7 +5,15 @@ export HOME="/home/kenjitheman"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/$HOME/go/bin"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
+export PATH="$HOME/.npm/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share/npm/bin:$PATH"
+export PATH="$HOME/.local/share/cargo/bin:$PATH"
+export PATH="$HOME/.local/share/go/bin:$PATH"
+export PATH="$HOME/.local/share/rustup/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -27,12 +35,12 @@ ZSH_THEME="robbyrussell"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# zstyle ":omz:update" mode disabled  # disable automatic updates
+# zstyle ":omz:update" mode auto      # update automatically without asking
+# zstyle ":omz:update" mode reminder  # just remind me to update when it"s time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# zstyle ":omz:update" frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -62,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
+# see "man strftime" for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
@@ -86,9 +94,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#   export EDITOR="vim"
 # else
-#   export EDITOR='mvim'
+#   export EDITOR="mvim"
 # fi
 
 # Compilation flags
@@ -102,30 +110,44 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias q='exit'
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
+alias q="exit"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
-alias c='clear'
-alias gtp='cd /home/kenjitheman/projs && clear && ls -a'
+alias c="clear"
+alias gtp="$HOME/projs && clear && ls -a"
 
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gcb='git checkout -b'
-alias gco='git checkout'
-alias gpl='git pull'
-alias gps='git push'
-alias gcl='git clone'
-alias gbd='git branch -D'
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gpl="git pull"
+alias gps="git push"
+alias gcl="git clone"
+alias gbd="git branch -D"
 
-alias f='/home/kenjitheman/projs/dotfiles/scripts/fzfman.sh'
+alias f="$HOME/projs/dotfiles/scripts/fzfman.sh"
+alias cht="$HOME/projs/dotfiles/scripts/chtman.sh"
+alias lf="lf-ueberzug"
 
-alias cht='/home/kenjitheman/projs/dotfiles/scripts/chtman.sh'
-
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR="nvim"
+export GIT_EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
 source $ZSH/ zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# pnpm
+export PNPM_HOME="/home/kenjitheman/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
