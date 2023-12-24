@@ -130,14 +130,14 @@ alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
 
-alias f="$HOME/projs/dotfiles/scripts/fzfman.sh"
-alias cht="$HOME/projs/dotfiles/scripts/chtman.sh"
-alias lf="lf-ueberzug"
+alias f="$HOME/.local/bin/fzfman.sh"
+alias cht="$HOME/.local/bin/chtman.sh"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+export VISUAL="nvim"
 source $ZSH/ zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
