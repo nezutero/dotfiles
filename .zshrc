@@ -5,7 +5,7 @@ export HOME="/home/kenjitheman"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/$HOME/go/bin"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -130,14 +130,15 @@ alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
 
-alias f="$HOME/.local/bin/fzfman.sh"
-alias cht="$HOME/.local/bin/chtman.sh"
+alias f="$HOME/fzfman"
+alias cht="$HOME/chtman.sh"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
-export VISUAL="nvim"
+export FILE_EXPLORER="ranger"
 source $ZSH/ zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
