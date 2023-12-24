@@ -26,6 +26,14 @@ super + p
 super + d
     discord
 
+# file manager
+super + e
+    alacritty -e ranger
+
+# file manager in root
+super + shift + e
+    alacritty -e sudo ranger
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
