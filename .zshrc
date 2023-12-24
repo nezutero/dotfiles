@@ -130,8 +130,8 @@ alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
 
-alias f="$HOME/fzfman"
-alias cht="$HOME/chtman.sh"
+alias f="$HOME/bin/fzfman.sh"
+alias cht="$HOME/bin/chtman.sh"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
