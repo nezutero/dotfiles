@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-selected=$(cat ./chtman-langs ./chtman-commands | fzf)
+selected=$(cat $HOME/bin/chtman-langs $HOME/bin/chtman-commands | fzf)
 if [[ -z $selected ]]; then
     exit 0
 fi
