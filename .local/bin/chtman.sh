@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-selected=$(cat /home/kenjitheman/projs/dotfiles/scripts/chtman-langs /home/kenjitheman/projs/dotfiles/scripts/chtman-commands | fzf)
+selected=$(cat ./chtman-langs ./chtman-commands | fzf)
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-read -p "Enter Query: " query
+read -p "Query: " query
 
 if grep -qs "$selected" /home/kenjitheman/projs/dotfiles/scripts/chtman-langs; then
     query=$(echo "$query" | tr ' ' '+')

@@ -8,5 +8,5 @@ if [ -n "$selected_path" ]; then
         nvim "$selected_path"
     fi
 else
-    echo "No selection made. Exiting."
+    echo "No selection made -> exiting"
 fi
