@@ -117,6 +117,8 @@ alias vim="nvim"
 
 alias c="clear"
 alias gtp="$HOME/projs && clear && ls -a"
+alias gtd="cd $HOME/projs/maintenance/dotfiles"
+alias gtc="cd $HOME/.config"
 
 alias g="git"
 alias gs="git status"
