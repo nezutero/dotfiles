@@ -7,8 +7,11 @@ super + Return
 	alacritty
 
 # program launcher
-super + @space
-	dmenu_run
+super + space
+    rofi -show drun
+
+super + shift + space
+    rofi -show run
 
 # firefox
 super + f
