@@ -4,7 +4,7 @@
 sudo pacman -Syu --noconfirm yay
 
 # install essential packages
-sudo pacman -Syu --noconfirm alacritty bspwm dconf dunst neofetch polybar ranger sxhkd tmux zsh neovim firefox pavucontrol gimp obs-studio xorg xorg-xinit xorg-xrandr xorg-xsetroot fzf gcc g++
+sudo pacman -Syu --noconfirm alacritty bspwm rofi dunst neofetch polybar ranger sxhkd tmux zsh neovim firefox pavucontrol gimp obs-studio xorg xorg-xinit xorg-xrandr xorg-xsetroot fzf gcc g++
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -26,6 +26,7 @@ ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.config/rofi ~/.config/rofi
 
 yay -S --noconfirm materia-gtk-theme
 
