@@ -10,7 +10,7 @@ sudo pacman -Syu --noconfirm alacritty bspwm rofi dunst neofetch polybar ranger 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # clone dotfiles repository
-git clone https://github.com/kenjitheman/dotfiles.git ~/dotfiles
+git clone https://github.com/btwkenji/dotfiles.git ~/dotfiles
 
 # symlink config files
 ln -sf ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -54,14 +54,10 @@ chsh -s /bin/zsh
 fc-cache -fv ~/.local/share/fonts
 
 # clone nvim config
-git clone https://github.com/kenjitheman/nvim.lua.git ~/.config/nvim
+git clone https://github.com/btwkenji/nvim.git ~/.config/nvim
 
 # install packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# additional configs
-gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaCove Nerd Font'
-gsettings set org.gnome.desktop.interface font-name 'CaskaydiaCove Nerd Font'
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -76,7 +72,7 @@ curl -fsSL https://bun.sh/install | bash
 sudo pacman -Syu --noconfirm python python-pip
 
 # clone firefox user.js
-git clone https://github.com/kenjitheman/some_confs.git ~/some_confs && cp ~/some_confs/user.js ~/.mozilla/firefox/*.default-release/user.js 
-&& rm -rf ~/some_confs
+git clone https://github.com/btwkenji/configs.git ~/configs && cp ~/configs/user.js ~/.mozilla/firefox/*.default-release/user.js 
+&& rm -rf ~/configs
 
 echo "Installation complete. Please restart your session to apply changes."
