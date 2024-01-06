@@ -12,13 +12,11 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #autostart
-# picom --config home/.config/picom/picom.conf &
-# feh --bg-fill /home/kenjitheman/walls/toxicman.png &
 dunst &
 polybar &
 
-# Set keyboard layout to English by default
+# set keyboard layout to English by default
 setxkbmap us
 
-# Set monitor resolution and refresh rate
+# set monitor resolution and refresh rate
 xrandr --output eDP-1 --mode 1920x1080 --rate 144
