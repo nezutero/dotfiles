@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export HOME="/home/kenjitheman"
+export HOME="/home/kenji"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -117,7 +117,7 @@ alias vim="nvim"
 
 alias c="clear"
 alias gtp="$HOME/projs && clear && ls -a"
-alias gtd="cd $HOME/projs/maintenance/dotfiles"
+alias gtd="cd $HOME/dotfiles"
 alias gtc="cd $HOME/.config"
 
 alias g="git"
@@ -144,7 +144,7 @@ export FILE_EXPLORER="ranger"
 source $ZSH/ zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
-export PNPM_HOME="/home/kenjitheman/.local/share/pnpm"
+export PNPM_HOME="/home/kenji/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
