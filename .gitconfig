@@ -1,9 +1,13 @@
 [user]
-	email = kenjitheman@proton.me
-	name = kenjitheman
+	email = btw4dev@gmail.com
+	name = btwkenji
 [github]
-	user = kenjitheman
+    user = btwkenji
+[gitlab]
+    user = btwkenji
 [credential]
 	helper = cache
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
