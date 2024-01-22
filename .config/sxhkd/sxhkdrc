@@ -15,7 +15,7 @@ super + shift + space
 
 # firefox
 super + f
-	firefox
+	firefox-developer-edition
 
 # telegram
 super + t

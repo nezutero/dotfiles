@@ -132,6 +132,8 @@ alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
 
+alias firefox="firefox-developer-edition"
+
 alias f="$HOME/bin/fzfman.sh"
 alias cht="$HOME/bin/chtman.sh"
 
@@ -139,12 +141,18 @@ export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
+export BROWSER="firefox-developer-edition"
 export FILE_EXPLORER="ranger"
+export FILE_MANAGER="ranger"
+export VIDEO_PLAYER="vlc"
+export SCREENSHOT_TOOL="scrot"
+export SCREENCAST_TOOL="obs"
+export PDF_VIEWER="zathura"
+export IMAGE_VIEWER="feh"
 source $ZSH/ zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
-export PNPM_HOME="/home/kenji/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
