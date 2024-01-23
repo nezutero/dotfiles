@@ -4,7 +4,7 @@
 sudo pacman -Syu --noconfirm yay
 
 # install essential packages
-sudo pacman -Syu --noconfirm alacritty bspwm rofi dunst neofetch polybar ranger sxhkd tmux zsh neovim firefox pavucontrol gimp obs-studio xorg xorg-xinit xorg-xrandr xorg-xsetroot fzf gcc g++
+sudo pacman -Syu --noconfirm alacritty bspwm rofi dunst neofetch polybar ranger sxhkd tmux zsh neovim chromium pavucontrol gimp obs-studio xorg xorg-xinit xorg-xrandr xorg-xsetroot fzf gcc g++
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -71,8 +71,7 @@ curl -fsSL https://bun.sh/install | bash
 # install python stuff
 sudo pacman -Syu --noconfirm python python-pip
 
-# clone firefox user.js
-git clone https://github.com/btwkenji/configs.git ~/configs && cp ~/configs/user.js ~/.mozilla/firefox/*.default-release/user.js 
-&& rm -rf ~/configs
+# clone chromium oauth configs
+git clone https://github.com/btwkenji/configs.git ~/configs/chromium/chromium-flags.conf && cp ~/configs/chromium/chromium-flags.conf ~/.config/chromium-flags.conf && rm -rf ~/configs
 
 echo "Installation complete. Please restart your session to apply changes."

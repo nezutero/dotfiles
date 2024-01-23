@@ -132,8 +132,6 @@ alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
 
-alias firefox="firefox-developer-edition"
-
 alias f="$HOME/bin/fzfman.sh"
 alias cht="$HOME/bin/chtman.sh"
 
@@ -141,7 +139,7 @@ export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox-developer-edition"
+export BROWSER="chromium"
 export FILE_EXPLORER="ranger"
 export FILE_MANAGER="ranger"
 export VIDEO_PLAYER="vlc"

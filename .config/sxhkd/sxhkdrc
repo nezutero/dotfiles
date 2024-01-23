@@ -13,9 +13,9 @@ super + space
 super + shift + space
     rofi -show run
 
-# firefox
+# browser
 super + f
-	firefox-developer-edition
+	chromium
 
 # telegram
 super + t
