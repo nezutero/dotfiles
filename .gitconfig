@@ -1,13 +1,17 @@
 [user]
-	email = btw4dev@gmail.com
-	name = btwkenji
+	email = btwdesu@gmail.com
+	name = kenjitheman
 [github]
-    user = btwkenji
+    user = kenjitheman
 [gitlab]
-    user = btwkenji
+    user = kenjitheman
 [credential]
 	helper = cache
 [url "git@github.com:"]
     insteadOf = https://github.com/
 [url "git@gitlab.com:"]
     insteadOf = https://gitlab.com/
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim

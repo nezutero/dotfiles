@@ -39,10 +39,10 @@ mods = "Super|Shift"
 save_to_clipboard = false
 
 [window]
-opacity = 1
+opacity = 0.9
 
 [font]
-size = 11.5
+size = 19
 
 [window.class]
 general = "Alacritty"
