@@ -8,6 +8,7 @@
     ],
     "modules-center": ["clock"],
     "modules-right": [
+        "disk",
         "temperature", 
         "memory", 
         "cpu", 
@@ -57,10 +58,8 @@
         "format-full": "FULL",
         "format-charging": "{icon} {capacity}% {time} ↑",
         "format-plugged": "{icon} {capacity}% {time}  ",
-        "format-alt": "{icon} {capacity}% {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format-icons": [" ", " ", " ", " ", " "],
+        "format-time": "{H}:{M}",
     },
     "battery#bat1": {
         "bat": "BAT1"
@@ -72,7 +71,12 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": " 睊",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "| {ifname}: {ipaddr}/{cidr} |"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "{percentage_used}% {path} |",
+        "path": "/"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

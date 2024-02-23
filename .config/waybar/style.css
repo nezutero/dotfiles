@@ -23,7 +23,7 @@
 
 @keyframes blink-critical {
     70% {
-      color: #000000;
+        color: #000000;
     }
 
     to {
@@ -127,7 +127,6 @@
 
 #mode {
     background: #000000;
-    border-top: 2px solid white;
     padding-bottom: 2px;
 }
 
@@ -148,26 +147,21 @@
     padding-left: 5px;
     padding-right: 5px;
     color: #cdd6f4;
+    border: none;
 }
 
 #workspaces button.focused {
-    border-bottom: 2px solid #cdd6f4;
     color: #cdd6f4;
 }
 
 #workspaces button.urgent {
-    border-color: #cdd6f4;
     color: #cdd6f4;
 }
 
 #workspaces button:hover {
-    background: #cdd6f4;
-    color: #000000;
-    border-bottom: 2px solid #000000;
+    background: none;
 }
 
-#workspaces button:active {
-    background: #000000;
-    color: #cdd6f4;
-    border-bottom: 2px solid #cdd6f4;
+#workspaces button.active {
+    border-bottom: 3px solid #cdd6f4;
 }
