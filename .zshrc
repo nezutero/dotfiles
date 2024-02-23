@@ -135,6 +135,8 @@ alias gbd="git branch -D"
 alias f="$HOME/bin/fzfman.sh"
 alias cht="$HOME/bin/chtman.sh"
 
+alias volmic="pactl set-source-volume alsa_input.pci-0000_00_1f.3.analog-stereo"
+
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 export VISUAL="nvim"
@@ -160,3 +162,5 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /home/kenji/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/kenji/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
