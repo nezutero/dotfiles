@@ -73,3 +73,9 @@ ln -sf ~/.dotfiles/.local/bin/chman-langs ~/.local/bin/chman-langs
 ln -sf ~/.dotfiles/.local/bin/chman.sh ~/.local/bin/chman.sh
 ln -sf ~/.dotfiles/.local/bin/fzfman.sh ~/.local/bin/fzfman.sh
 ln -sf ~/.dotfiles/.zshrc ~/.zshrc
+
+# create symlinks for root -> home
+sudo mkdir -p /root/.config
+sudo ln -sf ~/.dotfiles/.zshrc /root/.zshrc
+sudo ln -sf ~/.config/.oh-my-zsh /root/.oh-my-zsh
+sudo ln -sf ~/.config/nvim /root/.config/nvim
