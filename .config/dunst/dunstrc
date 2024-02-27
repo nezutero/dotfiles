@@ -1,0 +1,17 @@
+[global]
+font = CaskaydiaCove Nerd Font
+frame_width = 3
+frame_color = frame
+markup = full
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#dddddd"
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#dddddd"
+
+[urgency_critical]
+    background = "#ff4444"
+    foreground = "#ffffff"
