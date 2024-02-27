@@ -5,7 +5,7 @@ export HOME="/home/kenji"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/$HOME/go/bin"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -14,6 +14,7 @@ export PATH="$HOME/.local/share/npm/bin:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
 export PATH="$HOME/.local/share/rustup/bin:$PATH"
+export FLATPAK_USER_DIR=~/flatpak
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -132,8 +133,8 @@ alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
 
-alias f="$HOME/bin/fzfman.sh"
-alias cht="$HOME/bin/chtman.sh"
+alias f="$HOME/.local/bin/fzfman.sh"
+alias cht="$HOME/.local/bin/chtman.sh"
 
 alias volmic="pactl set-source-volume alsa_input.pci-0000_00_1f.3.analog-stereo"
 
@@ -144,8 +145,7 @@ export TERMINAL="alacritty"
 export BROWSER="firefox"
 export FILE_EXPLORER="ranger"
 export FILE_MANAGER="ranger"
-export VIDEO_PLAYER="vlc"
-export SCREENSHOT_TOOL="scrot"
+export VIDEO_PLAYER="mpv"
 export SCREENCAST_TOOL="obs"
 export PDF_VIEWER="zathura"
 export IMAGE_VIEWER="feh"
