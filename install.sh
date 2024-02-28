@@ -9,7 +9,8 @@ sudo pacman -S --noconfirm \
     telegram-desktop discord wl-clipboard grim slurp npm pnpm yarn gimp qt5ct lxappearance \
     neofetch zsh materia-gtk-theme nvidia nvidia-utils pavucontrol zip unzip tree \
     xf86-video-intel networkmanager lib32-nvidia-utils feh noto-fonts-cjk zig \
-    python nodejs ttf-dejavu noto-fonts-emoji zathura-pdf-mupdf fzf docker docker-compose
+    python nodejs ttf-dejavu noto-fonts-emoji zathura-pdf-mupdf fzf docker docker-compose \
+    alsa-utils
 
 # install Yay
 git clone https://aur.archlinux.org/yay.git
