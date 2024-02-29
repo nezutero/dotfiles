@@ -47,12 +47,23 @@ git clone https://github.com/kenjitheman/nvim.git ~/.config/neovim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-# cd ~/dotfiles and crete symlinks for dotfiles
 # cd into dotfiles directory
 cd ~/dotfiles
 
-# cd into dotfiles directory
-cd ~/dotfiles
+# Create .config directories if they don't exist
+mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/btop
+mkdir -p ~/.config/dunst
+mkdir -p ~/.config/hypr
+mkdir -p ~/.config/neofetch
+mkdir -p ~/.config/ranger
+mkdir -p ~/.config/rofi
+mkdir -p ~/.config/waybar
+mkdir -p ~/.config/zathura
+mkdir -p ~/.config/nvim
+
+# Create .local/bin directories if they don't exist
+mkdir -p ~/.local/bin
 
 # Create symlinks for .config directory
 ln -sf ~/.dotfiles/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
@@ -78,5 +89,5 @@ ln -sf ~/.dotfiles/.zshrc ~/.zshrc
 # create symlinks for root -> home
 sudo mkdir -p /root/.config
 sudo ln -sf ~/.dotfiles/.zshrc /root/.zshrc
-sudo ln -sf ~/.config/.oh-my-zsh /root/.oh-my-zsh
+sudo ln -sf ~/.oh-my-zsh /root/.oh-my-zsh
 sudo ln -sf ~/.config/nvim /root/.config/nvim
