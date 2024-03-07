@@ -14,7 +14,6 @@ export PATH="$HOME/.local/share/npm/bin:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
 export PATH="$HOME/.local/share/rustup/bin:$PATH"
-export FLATPAK_USER_DIR=~/flatpak
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -132,11 +131,10 @@ alias gpl="git pull"
 alias gps="git push"
 alias gcl="git clone"
 alias gbd="git branch -D"
+alias gbs="git switch"
 
 alias f="$HOME/.local/bin/fzfman.sh"
 alias cht="$HOME/.local/bin/chtman.sh"
-
-alias volmic="pactl set-source-volume alsa_input.pci-0000_00_1f.3.analog-stereo"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
