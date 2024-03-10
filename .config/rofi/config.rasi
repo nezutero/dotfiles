@@ -1,47 +1,101 @@
 * {
-    /* Theme settings */
-    highlight: bold;
+    font: "Figtree 13";
+    g-spacing: 10px;
+    g-margin: 0;
+    b-color: #000000FF;
+    fg-color: #FFFFFFFF;
+    fgp-color: #888888FF;
+    b-radius: 8px;
+    g-padding: 8px;
+    hl-color: #FFFFFFFF;
+    hlt-color: #000000FF;
+    alt-color: #111111FF;
+    wbg-color: #000000CC;
+    w-border: 2px solid;
+    w-border-color: #FFFFFFFF;
+    w-padding: 12px;
+}
+
+configuration {
+    modi: "drun";
+    show-icons: false;
+    display-drun: "  ";
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
     scrollbar: false;
-    font-weight: bold;
+    border: 0px solid;
+}
 
-    /* Custom dark colors */
-    dark-bg0-hard:     #000000;
-    dark-bg0:          #000000;
-    dark-bg2:          #707880;
-    dark-fg0:          #fff;
-    dark-fg1:          #fff;
-    dark-red-dark:     #cc241d;
-    dark-red-light:    #fb4934;
-    dark-yellow-dark:  #fff;
-    dark-yellow-light: #fff;
-    dark-gray:         #707880;
+window {
+    transparency: "real";
+    width: 600px;
+    border-radius: @b-radius;
+    background-color: @wbg-color;
+    border: @w-border;
+    border-color: @w-border-color;
+    padding: @w-padding;
+}
 
-    /* Theme colors */
-    background:                  @dark-bg0-hard;
-    background-color:            @background;
-    foreground:                  @dark-fg1;
-    border-color:                @dark-gray;
-    separatorcolor:              @border-color;
-    scrollbar-handle:            @border-color;
+prompt {
+    text-color: @fg-color;
+}
 
-    normal-background:           @background;
-    normal-foreground:           @foreground;
-    alternate-normal-background: @dark-bg0;
-    alternate-normal-foreground: @foreground;
-    selected-normal-background:  @dark-bg2;
-    selected-normal-foreground:  @dark-fg0;
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+}
 
-    active-background:           @dark-yellow-dark;
-    active-foreground:           @background;
-    alternate-active-background: @active-background;
-    alternate-active-foreground: @active-foreground;
-    selected-active-background:  @dark-yellow-light;
-    selected-active-foreground:  @active-foreground;
+entry {
+    placeholder: "search apps";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+}
 
-    urgent-background:           @dark-red-dark;
-    urgent-foreground:           @background;
-    alternate-urgent-background: @urgent-background;
-    alternate-urgent-foreground: @urgent-foreground;
-    selected-urgent-background:  @dark-red-light;
-    selected-urgent-foreground:  @urgent-foreground;
+mainbox {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    children: ["inputbar", "listview", "message"];
+}
+
+element {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    border: 0px solid;
+    border-radius: @b-radius;
+    border-color: @b-color;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+	background-color: transparent;
+	text-color: @fg-color;
+}
+
+element alternate.normal {
+	background-color: @alt-color;
+	text-color: @fg-color;
+}
+
+element selected.active {
+	background-color: @hl-color;
+	text-color: @hlt-color;
+}
+
+element selected.normal {
+	background-color: @hl-color;
+	text-color: @hlt-color;
+}
+
+message {
+    background-color: red;
+    border: 0px solid;
 }
