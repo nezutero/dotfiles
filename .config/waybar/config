@@ -5,8 +5,10 @@
     "spacing": 3,
     "modules-left": [
         "hyprland/workspaces", 
+        "clock"
     ],
-    "modules-center": ["clock"],
+    "modules-center": [
+    ],
     "modules-right": [
         "disk",
         "temperature", 
@@ -29,9 +31,8 @@
     },
     "clock": {
         "timezone": "Europe/Kyiv",
-        "format": "{:%A %Y-%m-%d %I:%M:%S %p}",
-        "interval": 1,
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "| {:%A, %B, %d/%m/%y %I:%M:%S %p}",
+        "interval": 1
     },
     "cpu": {
         "format": "CPU {usage}% |",
