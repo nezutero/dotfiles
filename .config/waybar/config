@@ -16,9 +16,9 @@
         "cpu", 
         "pulseaudio", 
         "keyboard-state", 
+        "hyprland/language",
         "network", 
-        // "hyprland/language",
-        "battery", 
+        "battery"
     ],
     "keyboard-state": {
         "numlock": true,
@@ -28,6 +28,11 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "hyprland/language": {
+        "format-en": "US",
+        "format-uk": "UA",
+        "format-ru": "RU",
     },
     "clock": {
         "timezone": "Europe/Kyiv",
@@ -82,10 +87,10 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} () {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": "{format_source} |",
-        "format-source": "| {volume}% ",
+        "format-source": "| {volume}%  |",
         "format-source-muted": "",
         "format-icons": {
             "default": ["", "", " "],
