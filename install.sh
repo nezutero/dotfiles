@@ -8,7 +8,7 @@ sudo pacman -S --noconfirm \
     neofetch zsh materia-gtk-theme nvidia nvidia-utils pavucontrol zip unzip tree \
     xf86-video-intel networkmanager lib32-nvidia-utils feh noto-fonts-cjk zig \
     python nodejs ttf-dejavu noto-fonts-emoji zathura-pdf-mupdf fzf docker docker-compose \
-    alsa-utils reaper audacity
+    alsa-utils reaper audacity dnsutils
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
