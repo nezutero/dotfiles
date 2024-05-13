@@ -5,7 +5,7 @@
     "spacing": 3,
     "modules-left": [
         "hyprland/workspaces", 
-        "clock"
+        "clock",
     ],
     "modules-center": [
     ],
@@ -18,7 +18,8 @@
         "keyboard-state", 
         "hyprland/language",
         "network", 
-        "battery"
+        "battery",
+        "custom/power"
     ],
     "keyboard-state": {
         "numlock": true,
@@ -36,15 +37,15 @@
     },
     "clock": {
         "timezone": "Europe/Kyiv",
-        "format": "| {:%A, %B, %d/%m/%y %I:%M:%S %p}",
+        "format": "{:%A, %B, %d/%m/%y %I:%M:%S %p}",
         "interval": 1
     },
     "cpu": {
-        "format": "CPU {usage}% |",
+        "format": "CPU {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "| RAM {}% |"
+        "format": "RAM {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -72,29 +73,34 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "| {essid} ({signalStrength}%)   |",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": " 睊",
-        "format-alt": "| {ifname}: {ipaddr}/{cidr} |"
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "disk": {
         "interval": 30,
-        "format": "{percentage_used}% {path} |",
+        "format": "{percentage_used}% {path}",
         "path": "/"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} () {format_source}",
-        "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": "{format_source} |",
-        "format-source": "| {volume}%  |",
-        "format-source-muted": "",
+        "format": "{volume}% {icon}  {format_source}",
+        "format-bluetooth": "{volume}% {icon} ()  {format_source}",
+        "format-bluetooth-muted": "{icon} () {format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
         "format-icons": {
             "default": ["", "", " "],
         },
         "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout -p layer-shell &",
+        "format": " ",
     }
 }

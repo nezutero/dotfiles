@@ -1,15 +1,3 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
 @keyframes blink-warning {
     70% {
         color: #000000;
@@ -32,12 +20,6 @@
     }
 }
 
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
 * {
     border: none;
     border-radius: 0;
@@ -46,32 +28,32 @@
     padding: 0;
 }
 
-/* The whole bar */
 #waybar {
-    background: #000000;
+    background-color: rgba(0, 0, 0, 0);
     color: #cdd6f4;
     font-family: CaskaydiaCove Nerd Font;
     font-size: 16px;
 }
 
-/* Each module */
 #battery,
 #clock,
 #cpu,
-#custom-keyboard-layout,
 #memory,
 #mode,
 #network,
 #pulseaudio,
-#temperature {
-    padding-left: 5px;
-    padding-right: 5px;
+#temperature,
+#disk,
+#language,
+#custom-power {
+    padding-left: 6px;
+    padding-right: 6px;
+    min-height: 0;
+    padding: 3px 10px;
+    border-radius: 7px;
+    margin: 1px 4px;
+    background-color: #000000; /* #181825 */
 }
-
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
 
 #battery {
     animation-timing-function: linear;
@@ -125,9 +107,23 @@
     animation-duration: 2s;
 }
 
-#mode {
-    background: #000000;
-    padding-bottom: 2px;
+#custom-power {
+    font-weight: bold;
+}
+
+#custom-power:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #1e1e2e;
+    background-color: #cdd6f4;
+}
+
+#disk.warning {
+    color: orange;
+}
+
+#disk.critical {
+    color: red;
 }
 
 #network.disconnected {
@@ -143,25 +139,61 @@
 }
 
 #workspaces button {
-    padding-bottom: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
+    all: initial;
+    min-width: 0;
+    padding: 3px 10px;
+    min-height: 0;
+    margin: 1px 4px;
+    border-radius: 7px;
+    background-color: #000000;
     color: #cdd6f4;
-    border: none;
-}
-
-#workspaces button.focused {
-    color: #cdd6f4;
-}
-
-#workspaces button.urgent {
-    color: #cdd6f4;
+    font-size: 16px;
+    font-family: CaskaydiaCove Nerd Font;
+    font-weight: bold;
 }
 
 #workspaces button:hover {
-    background: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #1e1e2e;
+    background-color: #cdd6f4;
 }
 
 #workspaces button.active {
-    border-bottom: 3px solid #cdd6f4;
+    color: #1e1e2e;
+    background-color: #89b4fa;
+}
+
+#tags button.occupied {
+	transition: none;
+	color: #F28FAD;
+	background: transparent;
+	font-size: 4px;
+}
+
+#tags button.focused {
+	color: #ABE9B3;
+    border-top: 2px solid #ABE9B3;
+    border-bottom: 2px solid #ABE9B3;
+}
+
+#tags button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #FAE3B0;
+    border-color: #E8A2AF;
+    color: #E8A2AF;
+}
+
+#tags button.focused:hover {
+    color: #E8A2AF;
+}
+
+#workspaces button.urgent {
+    background-color: #f38ba8;
+}
+
+tooltip {
+    border-radius: 8px;
 }
