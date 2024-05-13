@@ -36,7 +36,7 @@ git clone https://github.com/kenjitheman/nvim.git ~/.config/neovim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-yay -S spotify video-downloader vesktop spicefy-cli
+yay -S spotify video-downloader vesktop spicefy-cli wlogout
 
 git clone --depth=1 https://github.com/spicetify/spicetify-themes.git 
 cd spicetify-themes
