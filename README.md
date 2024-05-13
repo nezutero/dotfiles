@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-git clone https://github.com/kenjitheman/dotfiles.git ~/dotfiles
+git clone https://github.com/nezutero/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 

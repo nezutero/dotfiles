@@ -1,10 +1,10 @@
 [user]
-	email = im@kenjitheman.dev
-	name = kenjitheman
+	email = nezutero@gmail.com
+	name = nezutero
 [github]
-    user = kenjitheman
+    user = nezutero
 [gitlab]
-    user = kenjitheman
+    user = nezutero
 [credential]
 	helper = cache
 [url "git@github.com:"]

@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export HOME="/home/kenjitheman"
+export HOME="/home/nezutero"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -164,4 +164,4 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highli
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # bun completions
-[ -s "/home/kenjitheman/.bun/_bun" ] && source "/home/kenjitheman/.bun/_bun"
+[ -s "/home/nezutero/.bun/_bun" ] && source "/home/nezutero/.bun/_bun"

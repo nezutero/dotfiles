@@ -8,7 +8,7 @@ sudo pacman -S --noconfirm \
     neofetch zsh materia-gtk-theme nvidia nvidia-utils pavucontrol zip unzip tree \
     xf86-video-intel networkmanager lib32-nvidia-utils feh noto-fonts-cjk zig \
     python nodejs ttf-dejavu noto-fonts-emoji zathura-pdf-mupdf fzf docker docker-compose \
-    alsa-utils reaper audacity
+    alsa-utils reaper audacity dnsutils
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -31,7 +31,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-cascadia-code-nerd
 
-git clone https://github.com/kenjitheman/nvim.git ~/.config/neovim
+git clone https://github.com/nezutero/nvim.git ~/.config/neovim
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
