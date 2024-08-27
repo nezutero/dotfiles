@@ -36,7 +36,7 @@
         "format-ru": "RU",
     },
     "clock": {
-        "timezone": "Europe/Kyiv",
+        "timezone": "Europe/Paris",
         "format": "{:%A, %B, %d/%m/%y %I:%M:%S %p}",
         "interval": 1
     },

@@ -3,12 +3,12 @@
 sudo pacman -Syu
 
 sudo pacman -S --noconfirm \
-    firefox-developer-edition chromium git neovim zathura dunst btop waybar swaybg alacritty ranger rofi \
+    zathura dunst btop waybar swaybg alacritty ranger rofi \
     telegram-desktop wl-clipboard grim slurp npm pnpm yarn gimp qt5ct lxappearance \
-    neofetch zsh materia-gtk-theme nvidia nvidia-utils pavucontrol zip unzip tree \
-    xf86-video-intel networkmanager lib32-nvidia-utils feh noto-fonts-cjk zig \
+    fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree \
+    xf86-video-intel networkmanager feh noto-fonts-cjk zig \
     python nodejs ttf-dejavu noto-fonts-emoji zathura-pdf-mupdf fzf docker docker-compose \
-    alsa-utils reaper audacity dnsutils
+    alsa-utils dnsutils
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -17,8 +17,8 @@ cd ..
 rm -rf yay
 
 mkdir -p ~/dev/mantain
-mkdir -p ~/docs/{books,watashi}
-mkdir -p ~/pics/{walls,screenshots,avatars,logos}
+mkdir -p ~/docs/books
+mkdir -p ~/pics/{walls,screenshots}
 mkdir -p ~/vids/screencaptures
 mkdir -p ~/.local/bin
 
@@ -31,12 +31,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-cascadia-code-nerd
 
-git clone https://github.com/nezutero/nvim.git ~/.config/neovim
-
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-yay -S spotify video-downloader vesktop spicefy-cli wlogout
+yay -S spotify video-downloader vesktop wlogout spicefy-cli
 
 git clone --depth=1 https://github.com/spicetify/spicetify-themes.git 
 cd spicetify-themes
