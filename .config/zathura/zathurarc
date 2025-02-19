@@ -1,1 +1,8 @@
 set recolor true
+set selection-clipboard clipboard
+
+map <C-b> set recolor true
+map <C-w> set recolor false
+
+map <C-i> zoom in
+map <C-o> zoom out
