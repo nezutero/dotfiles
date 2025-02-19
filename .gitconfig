@@ -1,5 +1,5 @@
 [user]
-	email = nezutero@gmail.com
+	email = nezutero@pm.me
 	name = nezutero
 [github]
     user = nezutero
@@ -12,6 +12,6 @@
 [url "git@gitlab.com:"]
     insteadOf = https://gitlab.com/
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [core]
 	editor = nvim
