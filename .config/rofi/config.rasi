@@ -3,17 +3,17 @@
     font-style: bold;
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #000000FF;
-    fg-color: #FFFFFFFF;
-    fgp-color: #888888FF;
-    b-radius: 8px;
+    b-color: #fff;
+    fg-color: #fff;
+    fgp-color: #000000CC;
+    b-radius: 13px;
     g-padding: 8px;
-    hl-color: #FFFFFFFF;
-    hlt-color: #000000FF;
-    alt-color: #111111FF;
+    hl-color: #151515;
+    hlt-color: #fff;
+    alt-color: "transparent";
     wbg-color: #000000CC;
-    w-border: 2px solid;
-    w-border-color: #FFFFFFFF;
+    w-border: 1px solid;
+    w-border-color: #151515;
     w-padding: 12px;
 }
 
@@ -25,7 +25,7 @@ configuration {
 
 listview {
     columns: 1;
-    lines: 7;
+    lines: 5;
     fixed-height: true;
     fixed-columns: true;
     cycle: false;
@@ -35,7 +35,7 @@ listview {
 
 window {
     transparency: "real";
-    width: 600px;
+    width: 700px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: @w-border;
