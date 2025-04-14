@@ -3,7 +3,7 @@
 sudo pacman -Syu
 
 sudo pacman -S --noconfirm \
-    zathura dunst btop waybar hypridle hyprlock hyprpaper alacritty ranger rofi firefox-developer-edition chromium \
+    zathura dunst btop waybar hypridle hyprlock hyprpaper alacrit zen-browser chromium \
     telegram-desktop wl-clipboard grim slurp npm pnpm yarn gimp qt5ct lxappearance foliate \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity steam \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
@@ -16,14 +16,12 @@ makepkg -si
 cd ..
 rm -rf yay
 
-mkdir -p ~/Dev
-mkdir -p ~/Documents/books
-mkdir -p ~/Pictures/{walls,screenshots}
-mkdir -p ~/Videos/screencaptures
-mkdir -p ~/.local/bin
+mkdir -p ~/projs
+mkdir -p ~/Documents/{Books, Docs}
+mkdir -p ~/Pictures/{walls,screenshots,Webcam,backs}
+mkdir -p ~/Videos/{OBS,Webcam}
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}plugins/zsh-vi-mode

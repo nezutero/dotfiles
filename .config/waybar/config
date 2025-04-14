@@ -38,9 +38,10 @@
         "format-ru": "  RU",
     },
     "clock": {
-        "format": "  {:%H:%M:%S   %e %B, %A} ",
-        "format-alt": "  {:%H:%M:%S   %e %B, %A - %d/%m/%y} ",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "locale":"fr_FR.utf8",
+        "format": "  {:L%H:%M:%S   %e %B, %A} ",
+        "format-alt": "  {:L%H:%M:%S   %e %B, %A - %d/%m/%y} ",
+        "tooltip-format": "<big>{:L%Y %B}</big>\n<tt>{calendar}</tt>",
         "today-format": "<b>{}</b>",
         "interval": 1
     },

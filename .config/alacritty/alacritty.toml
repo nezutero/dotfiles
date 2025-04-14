@@ -1,16 +1,10 @@
-[colors.normal]
-black = "#44475a"
-blue = "#b4befe"
-cyan = "#94e2d5"
-green = "#a6e3a1"
-magenta = "#f5c2e7"
-red = "#f38ba8"
-white = "#bbbbbb"
-yellow = "#f9e2af"
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+]
 
 [colors.primary]
 background = "#000000"
-foreground = "#ffffff"
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
