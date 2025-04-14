@@ -1,25 +1,32 @@
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24,
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 15,
     "spacing": 3,
     "modules-left": [
-        "hyprland/workspaces", 
+        "hyprland/workspaces",
+        "custom/separator",
         "clock",
     ],
     "modules-center": [
     ],
     "modules-right": [
         "disk",
+        "custom/separator",
         "temperature", 
+        "custom/separator",
         "memory", 
+        "custom/separator",
         "cpu", 
-        "custom/brightness",
+        "custom/separator",
         "pulseaudio", 
-        "keyboard-state", 
+        "custom/separator",
         "hyprland/language",
+        "custom/separator",
         "network", 
+        "custom/separator",
         "battery",
+        "custom/separator",
         "custom/power"
     ],
     "keyboard-state": {
@@ -109,5 +116,10 @@
         "tooltip": false,
         "on-click": "wlogout -p layer-shell &",
         "format": " ",
-    }
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
 }

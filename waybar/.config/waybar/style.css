@@ -2,10 +2,9 @@
     70% {
         color: #000000;
     }
-
     to {
-        color: #cdd6f4;
-        background-color: orange;
+        color: #d4be98;
+        background-color: #d8a657;
     }
 }
 
@@ -13,10 +12,9 @@
     70% {
         color: #000000;
     }
-
     to {
-        color: #cdd6f4;
-        background-color: red;
+        color: #d4be98;
+        background-color: #ea6962;
     }
 }
 
@@ -29,11 +27,12 @@
 }
 
 #waybar {
-    background-color: rgba(0, 0, 0, 0);
-    color: #cdd6f4;
+    background-color: #000000;
+    color: #d4be98;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
+    border-top: 1px solid #3c3836
 }
 
 #battery,
@@ -47,13 +46,11 @@
 #disk,
 #language,
 #custom-power {
-    padding-left: 6px;
-    padding-right: 6px;
     min-height: 0;
-    padding: 3px 10px;
-    border-radius: 7px;
+    padding: 1px 1px;
+    border-radius: 0px; /* 7px */
     margin: 1px 4px;
-    background-color: #000000; /* #181825 */
+    background-color: #000000;
 }
 
 #battery {
@@ -63,11 +60,11 @@
 }
 
 #battery.warning {
-    color: orange;
+    color: #d8a657;
 }
 
 #battery.critical {
-    color: red;
+    color: #ea6962;
 }
 
 #battery.warning.discharging {
@@ -85,11 +82,11 @@
 }
 
 #cpu.warning {
-    color: orange;
+    color: #d8a657;
 }
 
 #cpu.critical {
-    color: red;
+    color: #ea6962;
 }
 
 #memory {
@@ -99,11 +96,11 @@
 }
 
 #memory.warning {
-    color: orange;
+    color: #d8a657;
 }
 
 #memory.critical {
-    color: red;
+    color: #ea6962;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
@@ -115,24 +112,24 @@
 #custom-power:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-    color: #1e1e2e;
-    background-color: #cdd6f4;
+    color: #000000;
+    background-color: #d4be98;
 }
 
 #disk.warning {
-    color: orange;
+    color: #d8a657;
 }
 
 #disk.critical {
-    color: red;
+    color: #ea6962;
 }
 
 #network.disconnected {
-    color: orange;
+    color: #d8a657;
 }
 
 #temperature.critical {
-    color: red;
+    color: #ea6962;
 }
 
 #window {
@@ -142,13 +139,13 @@
 #workspaces button {
     all: initial;
     min-width: 0;
-    padding: 3px 10px;
+    padding: 1.5px 8px; /* 3px 10px */
     min-height: 0;
     margin: 1px 4px;
-    border-radius: 7px;
+    border-radius: 0px; /* 7px */
     background-color: #000000;
-    color: #cdd6f4;
-    font-size: 16px;
+    color: #d4be98;
+    font-size: 15px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
 }
@@ -156,45 +153,45 @@
 #workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-    color: #1e1e2e;
-    background-color: #cdd6f4;
+    color: #000000;
+    background-color: #d4be98;
 }
 
 #workspaces button.active {
-    color: #1e1e2e;
-    background-color: #89b4fa;
+    color: #000000;
+    background-color: #d4be98;
 }
 
 #tags button.occupied {
-	transition: none;
-	color: #F28FAD;
-	background: transparent;
-	font-size: 4px;
+    transition: none;
+    color: #ea6962;
+    background: transparent;
+    font-size: 4px;
 }
 
 #tags button.focused {
-	color: #ABE9B3;
-    border-top: 2px solid #ABE9B3;
-    border-bottom: 2px solid #ABE9B3;
+    color: #a9b665;
+    border-top: 2px solid #a9b665;
+    border-bottom: 2px solid #a9b665;
 }
 
 #tags button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #FAE3B0;
-    border-color: #E8A2AF;
-    color: #E8A2AF;
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: #d8a657;
+    border-color: #d3869b;
+    color: #d3869b;
 }
 
 #tags button.focused:hover {
-    color: #E8A2AF;
+    color: #d3869b;
 }
 
 #workspaces button.urgent {
-    background-color: #f38ba8;
+    background-color: #ea6962;
 }
 
 tooltip {
-    border-radius: 8px;
+    border-radius: 0px;
 }

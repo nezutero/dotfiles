@@ -19,18 +19,18 @@ require("lazy").setup({
         config = true,
         opts = {},
     },
-    {
+    --[[ {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
         config = true,
         opts = ...
-    },
-    {
+     }, -- ]]
+    --[[ {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         opts = {},
-    },
+    }, --]]
     {
         "nvim-treesitter/nvim-treesitter"
         -- build = ":TSUpdate",
@@ -120,6 +120,11 @@ require("lazy").setup({
     },
     config = function() require("lsp-progress").setup() end
 },
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function() require("colorizer").setup() end
+
+    },
     {
         "ellisonleao/glow.nvim",
         config = function()
