@@ -8,7 +8,7 @@ sudo pacman -S --noconfirm \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity steam \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf fzf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
-    wlogout vesktop spotify video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji
+    wlogout vesktop spotify video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -29,3 +29,6 @@ git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/c
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-jetbrains-mono-nerd
+
+cd ~/dotfiles
+stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim ranger rofi swaylock waybar wlogout zathura zsh

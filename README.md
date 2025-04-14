@@ -16,10 +16,3 @@ cd ~/dotfiles
 chmod +x install.sh
 ./install.sh 
 ```
-
-```sh
-cp -r ~/dotfiles/.config/* ~/.config
-cp -r ~/dotfiles/.local/bin/* ~/.local/bin
-cp ~/dotfiles/.gitconfig ~/.gitconfig
-cp ~/dotfiles/.zsh/.zshrc ~/.zshrc
-```
