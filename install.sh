@@ -7,7 +7,7 @@ sudo pacman -S --noconfirm \
     telegram-desktop wl-clipboard grim slurp npm pnpm yarn gimp qt5ct lxappearance foliate \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity steam \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
-    zathura-pdf-mupdf fzf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
+    zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
     wlogout vesktop spotify video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow
 
 git clone https://aur.archlinux.org/yay.git
@@ -31,5 +31,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 yay -S ttf-jetbrains-mono-nerd
 yay -S gruvbox-dark-gtk gruvbox-plus-icon-theme
 
+sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
+yay -S resvg
+
 cd ~/dotfiles
-stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim ranger rofi swaylock waybar wlogout zathura zsh
+stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim rofi swaylock waybar wlogout zathura zsh
