@@ -29,6 +29,7 @@ git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/c
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-jetbrains-mono-nerd
+yay -S gruvbox-dark-gtk gruvbox-plus-icon-theme
 
 cd ~/dotfiles
 stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim ranger rofi swaylock waybar wlogout zathura zsh

@@ -14,6 +14,8 @@ export PATH="$HOME/.local/share/npm/bin:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
 export PATH="$HOME/.local/share/rustup/bin:$PATH"
+export GTK_THEME=Gruvbox-Dark
+export GTK_ICON_THEME=Gruvbox-Plus-Dark
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
