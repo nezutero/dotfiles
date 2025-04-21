@@ -72,7 +72,7 @@
         },
         "format": "{icon} {capacity}% {time} ↓",
         "format-full": "{icon} {capacity}% {time} ↓",
-        "format-charging": "{icon} {capacity}% {time}↑ " ,
+        "format-charging": "{icon} {capacity}% {time} ↑ " ,
         "format-plugged": "{icon} {capacity}% {time}",
         "format-icons": [" ", " ", " ", " ", " "],
         "format-time": "{H}:{M}",

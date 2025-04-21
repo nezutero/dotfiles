@@ -86,3 +86,4 @@ text/x-c++src=nvim.desktop
 text/plain=nvim.desktop
 text/tcl=nvim.desktop
 text/x-java=nvim.desktop
+x-scheme-handler/discord=vesktop.desktop
