@@ -167,3 +167,5 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highli
 
 # bun completions
 [ -s "/home/nezutero/.bun/_bun" ] && source "/home/nezutero/.bun/_bun"
+
+export PATH=$PATH:/home/nezutero/.spicetify
