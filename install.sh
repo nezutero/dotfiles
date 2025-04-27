@@ -32,7 +32,7 @@ yay -S ttf-jetbrains-mono-nerd
 yay -S gruvbox-dark-gtk gruvbox-plus-icon-theme
 
 sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
-yay -S resvg
+yay -S resvg rofi-bluetooth-git
 
 cd ~/dotfiles
 stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim rofi swaylock waybar wlogout zathura zsh
