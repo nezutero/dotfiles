@@ -39,7 +39,7 @@
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 20
+    notification_limit = 10
 
     ### Progress bar ###
 
@@ -93,7 +93,7 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 15
 
     # Padding between text and icon.
     text_icon_padding = 0
@@ -103,7 +103,7 @@
     frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#000000"
+    frame_color = "#d4be98"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -227,7 +227,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 64
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -244,7 +244,7 @@
     ### Misc/Advanced ###
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox
+    browser = /usr/bin/zen-browser
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -324,23 +324,23 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#181825"
-    foreground = "#ffffff"
-    timeout = 10
+    background = "#000000"
+    foreground = "#d4be98"
+    timeout = 0
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#181825"
-    foreground = "#ffffff"
-    timeout = 10
+    background = "#000000"
+    foreground = "#d4be98"
+    timeout = 5
     override_pause_level = 30
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
     background = "#900000"
-    foreground = "#ffffff"
+    foreground = "#d4be98"
     frame_color = "#ff0000"
     timeout = 0
     override_pause_level = 60
@@ -349,7 +349,7 @@
 
 [backlight]
     appname = "Backlight"
-    highlight = "#eba0ac"
+    highlight = "#d4be98"
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #
