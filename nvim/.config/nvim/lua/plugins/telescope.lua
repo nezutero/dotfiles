@@ -3,13 +3,50 @@ local telescope = require("telescope")
 
 telescope.setup({ -- remove file preview
     defaults = {
+        vimgrep_arguments = {
+            "rg",
+            "--follow",        -- Follow symbolic links
+            "--hidden",        -- Search for hidden files
+            "--no-heading",    -- Don't group matches by each file
+            "--with-filename", -- Print the file path with the matched lines
+            "--line-number",   -- Show line numbers
+            "--column",        -- Show column numbers
+            "--smart-case",    -- Smart case search
+
+            -- Exclude some patterns from search
+            "--glob=!**/.git/*",
+            "--glob=!**/.idea/*",
+            "--glob=!**/.vscode/*",
+            "--glob=!**/build/*",
+            "--glob=!**/dist/*",
+            "--glob=!**/yarn.lock",
+            "--glob=!**/package-lock.json",
+        },
+        ...
+    },
+    pickers = {
+        find_files = {
+            hidden = true,
+            find_command = {
+                "rg",
+                "--files",
+                "--hidden",
+                "--glob=!**/.git/*",
+                "--glob=!**/.idea/*",
+                "--glob=!**/.vscode/*",
+                "--glob=!**/build/*",
+                "--glob=!**/dist/*",
+                "--glob=!**/yarn.lock",
+                "--glob=!**/package-lock.json",
+            },
+        },
         file_sorter = require("telescope.sorters").get_fzy_sorter,
         prompt_prefix = " > ",
         file_previewer = require("telescope.previewers").vim_buffer_cat.new,
         layout_config = {
             horizontal = {
-                width = 0.8, -- 0.5
-                height = 0.8, -- 0.6
+                width = 0.8,         -- 0.5
+                height = 0.8,        -- 0.6
                 preview_width = 0.7, -- 0
             },
         },
