@@ -69,11 +69,17 @@
 #battery.warning.discharging {
     animation-name: blink-warning;
     animation-duration: 3s;
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 #battery.critical.discharging {
     animation-name: blink-critical;
     animation-duration: 2s;
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 #clock {
@@ -138,10 +144,10 @@
 #workspaces button {
     all: initial;
     min-width: 0;
-    padding: 1.5px 8px; /* 3px 10px */
+    padding: 1.5px 8px;
     min-height: 0;
     margin: 1;
-    border-radius: 0px; /* 7px */
+    border-radius: 4px;
     background-color: #000000;
     color: #d4be98;
     font-size: 15px;

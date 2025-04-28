@@ -85,7 +85,7 @@
         "format-wifi": " ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰖪",
+        "format-disconnected": "󰖪 ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "family": "ipv4",
         "tooltip-format-wifi": "-     {ifname} @ {essid}\n- IP: {ipaddr}\n- Strength: {signalStrength}%\n- Freq: {frequency}MHz\n-  {bandwidthUpBits}  {bandwidthDownBits}",
