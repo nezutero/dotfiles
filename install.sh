@@ -4,7 +4,7 @@ sudo pacman -Syu
 
 sudo pacman -S --noconfirm \
     zathura dunst btop waybar hypridle hyprlock hyprpaper alacrit zen-browser chromium \
-    telegram-desktop wl-clipboard grim slurp npm pnpm yarn gimp qt5ct nwg-look foliate \
+    telegram-desktop wl-clipboard grim slurp npm pnpm yarn gimp qt5ct nwg-look \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity steam \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
