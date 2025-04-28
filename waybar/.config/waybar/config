@@ -26,22 +26,15 @@
         "custom/separator",
         "pulseaudio", 
         "custom/separator",
+        "backlight",
+        "custom/separator",
         "battery",
     ],
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
     "hyprland/language": {
         "format-en": "  EN",
         "format-fr": "  FR",
         "format-uk": "  UA",
-        "format-ru": "  RU",
+        "format-ru": "  RU"
     },
     "clock": {
         "locale":"fr_FR.utf8",
@@ -66,6 +59,11 @@
         "format": "{temperatureC}°C {icon}",
         "format-icons": [""],
     },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        // "format-icons": [" ", " "]
+        "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕"]
+    },
     "battery": {
         "states": {
             "good": 100,
@@ -74,9 +72,9 @@
         },
         "format": "{icon} {capacity}% {time} ↓",
         "format-full": "{icon} {capacity}% {time} ↓",
-        "format-charging": "{icon} {capacity}% {time} ↑ " ,
+        "format-charging": "{icon} {capacity}% {time}  ↑" ,
         "format-plugged": "{icon} {capacity}% {time}",
-        "format-icons": [" ", " ", " ", " ", " "],
+        "format-icons": ["󰂎", "󰁻", "󰁾", "󰂀", "󰁹"],
         "format-time": "{H}:{M}",
     },
     "battery#bat1": {
@@ -100,8 +98,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}  {format_source}",
-        "format-bluetooth": "{volume}% {icon} () {format_source}",
+        "format": "{volume}% {icon} | {format_source}",
+        "format-bluetooth": "{volume}% {icon} () | {format_source}",
         "format-bluetooth-muted": "{icon} () {format_source}",
         "format-muted": "{format_source}",
         "format-source": "{volume}% ",
@@ -109,7 +107,8 @@
         "format-icons": {
             "default": ["", "", " "],
         },
-        "on-click": "pavucontrol"
+        "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol"
     },
     //"custom/power": {
     //    "tooltip": false,
@@ -123,9 +122,9 @@
     },
     "bluetooth": {
         // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-        "format": " {status}",
-        "format-disabled": "", // an empty format will hide the module
-        "format-connected": " {num_connections} connected",
+        "format": "󰂯 {status}",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱 {num_connections}",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
