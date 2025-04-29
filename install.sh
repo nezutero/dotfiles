@@ -37,3 +37,4 @@ yay -S resvg rofi-bluetooth-git
 cd ~/dotfiles
 stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim rofi swaylock waybar zathura zsh tmux .local
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cargo install spotify_player --no-default-features --features pulseaudio-backend,daemon
