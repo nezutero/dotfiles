@@ -19,21 +19,9 @@ require("lazy").setup({
         config = true,
         opts = {},
     },
-    --[[ {
-        "ellisonleao/gruvbox.nvim",
-        priority = 1000,
-        config = true,
-        opts = ...
-     }, -- ]]
-    --[[ {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    }, --]]
     {
-        "nvim-treesitter/nvim-treesitter"
-        -- build = ":TSUpdate",
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
     },
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -126,13 +114,23 @@ require("lazy").setup({
 
     },
     {
-        "ellisonleao/glow.nvim",
-        config = function()
-            require(require("glow").setup({
-                width = 140,
-                height = 100,
-            }))
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
         end,
-        cmd = "Glow"
+        ft = { "markdown" },
+    },
+    { "mbbill/undotree" },
+    {
+        "hedyhli/markdown-toc.nvim",
+        ft = "markdown",
+        cmd = { "Mtoc" },
+        opts = {
+            toc_list = {
+                markers = '1.',
+            },
+        },
     },
 })
