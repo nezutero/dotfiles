@@ -8,8 +8,9 @@
     fgp-color: #000000CC;
     b-radius: 13px;
     g-padding: 8px;
-    hl-color: #151515;
+    hl-color: #d4be98;
     hlt-color: #d4be98;
+    hlts-color: #151515;
     alt-color: "transparent";
     wbg-color: #000000CC;
     w-border: 1px solid;
@@ -93,7 +94,7 @@ element selected.active {
 
 element selected.normal {
 	background-color: @hl-color;
-	text-color: @hlt-color;
+	text-color: @hlts-color;
 }
 
 message {
