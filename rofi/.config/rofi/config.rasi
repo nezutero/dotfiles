@@ -21,7 +21,7 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun: "  ";
+    display-drun: " ";
 }
 
 listview {
