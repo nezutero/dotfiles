@@ -121,6 +121,7 @@ alias c="clear"
 alias gtp="$HOME/projs && clear && ls -a"
 alias gtd="cd $HOME/dotfiles"
 alias gtc="cd $HOME/.config"
+alias gtn="cd $HOME/notes"
 
 alias g="git"
 alias gs="git status"
