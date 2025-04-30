@@ -35,6 +35,6 @@ sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
 yay -S resvg rofi-bluetooth-git
 
 cd ~/dotfiles
-stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim rofi swaylock waybar zathura zsh tmux .local spotify-player
+stow alacritty dunst chromium git gtk fontconfig hypr imv mime mpv nvim rofi swaylock waybar zathura zsh tmux .local spotify-player glow
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cargo install spotify_player --no-default-features --features pulseaudio-backend,daemon
