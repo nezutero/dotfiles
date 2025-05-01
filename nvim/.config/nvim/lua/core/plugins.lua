@@ -92,7 +92,7 @@ require("lazy").setup({
         dependencies = {
             "nvim-tree/nvim-web-devicons",
             "linrongbin16/lsp-progress.nvim"
-        }
+        },
     },
     { "nvim-tree/nvim-web-devicons" },
     { "hrsh7th/cmp-nvim-lsp-signature-help" }, {
