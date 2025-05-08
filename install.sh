@@ -16,7 +16,7 @@ makepkg -si
 cd ..
 rm -rf yay
 
-mkdir -p ~/projs
+mkdir -p ~/dev
 mkdir -p ~/Documents/{Books, Docs}
 mkdir -p ~/Pictures/{walls,screenshots,Webcam,backs}
 mkdir -p ~/Videos/{OBS,Webcam}
