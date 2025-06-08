@@ -11,6 +11,7 @@ sudo pacman -S --noconfirm \
     vesktop video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp
 
 sudo systemctl enable tlp.service
+sudo systemctl enable --now tlp
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
