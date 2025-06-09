@@ -49,6 +49,9 @@ vim.opt.updatetime = 50
 -- Highlight a column at position 80
 vim.opt.colorcolumn = "0"
 
+-- Remove the tilde sign on blank lines permanently
+vim.opt.fillchars = {eob = " "}
+
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "text", "markdown" },
     callback = function()
