@@ -8,7 +8,8 @@ sudo pacman -S --noconfirm \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity steam \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
-    vesktop video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb nasm
+    vesktop video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb \
+    nasm speedcrunch
 
 sudo systemctl enable tlp.service
 sudo systemctl enable --now tlp
