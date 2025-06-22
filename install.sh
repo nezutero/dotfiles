@@ -9,7 +9,7 @@ sudo pacman -S --noconfirm \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
     vesktop video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb \
-    nasm speedcrunch
+    nasm speedcrunch spotify
 
 sudo systemctl enable tlp.service
 sudo systemctl enable --now tlp
