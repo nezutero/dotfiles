@@ -141,7 +141,7 @@ alias cht="$HOME/.local/bin/chtman.sh"
 
 alias mnt="udisksctl mount -b /dev/sda1"
 alias umnt="udisksctl unmount -b /dev/sda1"
-alias cdk="cd /run/media/nezutero/KINGSTON"
+alias cdf="cd /run/media/nezutero/KINGSTON"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
