@@ -9,7 +9,7 @@ sudo pacman -S --noconfirm \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
     vesktop video-downloader ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb \
-    nasm speedcrunch spotify pacman-contrib github-cli ttf-fira-code 
+    nasm speedcrunch spotify pacman-contrib github-cli ttf-fira-code translate-shell
 
 sudo systemctl enable tlp.service
 sudo systemctl enable --now tlp
@@ -34,7 +34,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-jetbrains-mono-nerd
 yay -S gruvbox-dark-gtk gruvbox-plus-icon-theme
-yay -S ncspot
+yay -S ncspot dialect
 
 sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
 yay -S resvg rofi-bluetooth-git
