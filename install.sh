@@ -34,7 +34,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-jetbrains-mono-nerd
 yay -S gruvbox-dark-gtk gruvbox-plus-icon-theme
-yay -S ncspot dialect
+yay -S ncspot
 
 sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
 yay -S resvg rofi-bluetooth-git
