@@ -144,6 +144,8 @@ alias mnt="udisksctl mount -b /dev/sda1"
 alias umnt="udisksctl unmount -b /dev/sda1"
 alias cdf="cd /run/media/nezutero/KINGSTON"
 
+alias readmd="glow"
+
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 export VISUAL="nvim"
