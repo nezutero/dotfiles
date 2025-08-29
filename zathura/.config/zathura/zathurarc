@@ -1,53 +1,70 @@
-# Core two-color base
-set default-bg                  "rgba(28,28,28,1)"     # #1c1c1c  (background)
-set default-fg                  "rgba(204,204,204,1)"  # #cccccc  (main text)
-
-# Notifications (yellow as primary accent -> #d4be98)
-set notification-error-bg       "rgba(28,28,28,1)"     # bg
-set notification-error-fg       "rgba(251,73,52,1)"    # bright:red (keep distinct for errors)
-set notification-warning-bg     "rgba(28,28,28,1)"     # bg
-set notification-warning-fg     "rgba(212,190,152,1)"  # #d4be98 (primary accent)
-set notification-bg             "rgba(28,28,28,1)"     # bg
-set notification-fg             "rgba(212,190,152,1)"  # #d4be98 (primary accent)
-
-# Completion (two-tone base + yellow accents -> #d4be98)
-set completion-bg               "rgba(34,34,34,1)"     # slightly lighter bg
-set completion-fg               "rgba(204,204,204,1)"  # main text
-set completion-group-bg         "rgba(28,28,28,1)"     # bg
-set completion-group-fg         "rgba(170,170,170,1)"  # muted gray for group labels
-set completion-highlight-bg     "rgba(212,190,152,0.18)"# translucent #d4be98 (highlight)
-set completion-highlight-fg     "rgba(34,34,34,1)"     # dark text on highlight
-
-# Index (list view)
-set index-bg                    "rgba(34,34,34,1)"     # bg2
-set index-fg                    "rgba(204,204,204,1)"  # fg
-set index-active-bg             "rgba(212,190,152,0.18)"# translucent #d4be98 for active
-set index-active-fg             "rgba(34,34,34,1)"     # dark on active
-
-# Input & status bars (use same base colors)
-set inputbar-bg                 "rgba(28,28,28,1)"     # bg
-set inputbar-fg                 "rgba(204,204,204,1)"  # fg
-
-set statusbar-bg                "rgba(28,28,28,1)"     # same as bg
-set statusbar-fg                "rgba(204,204,204,1)"  # same as main text
-
-# Highlights (selection/active) — #d4be98 accents semi-transparent
-set highlight-color             "rgba(212,190,152,0.30)" # translucent #d4be98 selection
-set highlight-active-color      "rgba(254,128,25,0.30)"   # brighter orange-y for active (unchanged)
-
-# Rendering & loading
+# Appearance (colors)
+set default-bg                  "#1c1c1c"
+set default-fg                  "#cccccc"
+set notification-error-bg       "#1c1c1c"
+set notification-error-fg       "#fb4934"
+set notification-warning-bg     "#1c1c1c"
+set notification-warning-fg     "#d4be98"
+set notification-bg             "#1c1c1c"
+set notification-fg             "#d4be98"
+set completion-bg               "#222222"
+set completion-fg               "#cccccc"
+set completion-group-bg         "#1c1c1c"
+set completion-group-fg         "#aaaaaa"
+set completion-highlight-bg     "#d4be98"
+set completion-highlight-fg     "#222222"
+set index-bg                    "#222222"
+set index-fg                    "#cccccc"
+set index-active-bg             "#d4be98"
+set index-active-fg             "#222222"
+set inputbar-bg                 "#1c1c1c"
+set inputbar-fg                 "#cccccc"
+set statusbar-bg                "#1c1c1c"
+set statusbar-fg                "#cccccc"
+set highlight-color             "rgba(212,190,152,0.30)"
+set highlight-active-color      "rgba(254,128,25,0.30)"
 set render-loading              true
-set render-loading-bg           "rgba(28,28,28,1)"     # bg
-set render-loading-fg           "rgba(204,204,204,1)"  # fg
+set render-loading-bg           "#1c1c1c"
+set render-loading-fg           "#cccccc"
+set recolor-lightcolor          "#1c1c1c"
+set recolor-darkcolor           "#cccccc"
 
-# Recolor book content
-set recolor-lightcolor          "rgba(28,28,28,1)"     # bg
-set recolor-darkcolor           "rgba(204,204,204,1)"  # fg
-set recolor                     "true"
-set recolor-keephue             "true"
+# Reader behavior
+set recolor                     true
+set recolor-keephue             true
+set selection-clipboard         clipboard
+set pages-per-row               1
+set scroll-step                 50
+set adjust-open                 best-fit
+set continuous-hist-save        true
+set synctex                     true
 
-set selection-clipboard clipboard
+# Zoom/fit settings
+set zoom-min                    10
+set zoom-max                    1000
+set zoom-step                   10
 
+# Keybindings
+map n navigate next
+map p navigate previous
+map <Right> navigate next
+map <Left> navigate previous
+map <Down> scroll down
+map <Up> scroll up
+map <space> navigate next
+map b navigate previous
+map <C-Right> navigate next
+map <C-Left> navigate previous
+
+# Mouse wheel navigation
+map <Button4> scroll up
+map <Button5> scroll down
+
+# Utility commands
+map R reload
+map a adjust_window best-fit
+map s adjust_window width
 map <C-i> zoom in
 map <C-o> zoom out
-set pages-per-row 1
+map r rotate
+map <F11> toggle_fullscreen
