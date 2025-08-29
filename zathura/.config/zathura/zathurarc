@@ -1,42 +1,51 @@
-set notification-error-bg       "rgba(40,40,40,1)"     # bg
-set notification-error-fg       "rgba(251,73,52,1)"    # bright:red
-set notification-warning-bg     "rgba(40,40,40,1)"     # bg
-set notification-warning-fg     "rgba(250,189,47,1)"   # bright:yellow
-set notification-bg             "rgba(40,40,40,1)"     # bg
-set notification-fg             "rgba(184,187,38,1)"   # bright:green
+# Core two-color base
+set default-bg                  "rgba(28,28,28,1)"     # #1c1c1c  (background)
+set default-fg                  "rgba(204,204,204,1)"  # #cccccc  (main text)
 
-set completion-bg               "rgba(80,73,69,1)"     # bg2
-set completion-fg               "rgba(235,219,178,1)"  # fg
-set completion-group-bg         "rgba(60,56,54,1)"     # bg1
-set completion-group-fg         "rgba(146,131,116,1)"  # gray
-set completion-highlight-bg     "rgba(131,165,152,1)"  # bright:blue
-set completion-highlight-fg     "rgba(80,73,69,1)"     # bg2
+# Notifications (yellow as primary accent -> #d4be98)
+set notification-error-bg       "rgba(28,28,28,1)"     # bg
+set notification-error-fg       "rgba(251,73,52,1)"    # bright:red (keep distinct for errors)
+set notification-warning-bg     "rgba(28,28,28,1)"     # bg
+set notification-warning-fg     "rgba(212,190,152,1)"  # #d4be98 (primary accent)
+set notification-bg             "rgba(28,28,28,1)"     # bg
+set notification-fg             "rgba(212,190,152,1)"  # #d4be98 (primary accent)
 
-set index-bg                    "rgba(80,73,69,1)"     # bg2
-set index-fg                    "rgba(235,219,178,1)"  # fg
-set index-active-bg             "rgba(131,165,152,1)"  # bright:blue
-set index-active-fg             "rgba(80,73,69,1)"     # bg2
+# Completion (two-tone base + yellow accents -> #d4be98)
+set completion-bg               "rgba(34,34,34,1)"     # slightly lighter bg
+set completion-fg               "rgba(204,204,204,1)"  # main text
+set completion-group-bg         "rgba(28,28,28,1)"     # bg
+set completion-group-fg         "rgba(170,170,170,1)"  # muted gray for group labels
+set completion-highlight-bg     "rgba(212,190,152,0.18)"# translucent #d4be98 (highlight)
+set completion-highlight-fg     "rgba(34,34,34,1)"     # dark text on highlight
 
-set inputbar-bg                 "rgba(40,40,40,1)"     # bg
-set inputbar-fg                 "rgba(235,219,178,1)"  # fg
+# Index (list view)
+set index-bg                    "rgba(34,34,34,1)"     # bg2
+set index-fg                    "rgba(204,204,204,1)"  # fg
+set index-active-bg             "rgba(212,190,152,0.18)"# translucent #d4be98 for active
+set index-active-fg             "rgba(34,34,34,1)"     # dark on active
 
-set statusbar-bg                "rgba(80,73,69,1)"     # bg2
-set statusbar-fg                "rgba(235,219,178,1)"  # fg
+# Input & status bars (use same base colors)
+set inputbar-bg                 "rgba(28,28,28,1)"     # bg
+set inputbar-fg                 "rgba(204,204,204,1)"  # fg
 
-set highlight-color             "rgba(250,189,47,0.5)" # bright:yellow
-set highlight-active-color      "rgba(254,128,25,0.5)" # bright:orange
+set statusbar-bg                "rgba(28,28,28,1)"     # same as bg
+set statusbar-fg                "rgba(204,204,204,1)"  # same as main text
 
-set default-bg                  "rgba(40,40,40,1)"     # bg
-set default-fg                  "rgba(235,219,178,1)"  # fg
+# Highlights (selection/active) — #d4be98 accents semi-transparent
+set highlight-color             "rgba(212,190,152,0.30)" # translucent #d4be98 selection
+set highlight-active-color      "rgba(254,128,25,0.30)"   # brighter orange-y for active (unchanged)
+
+# Rendering & loading
 set render-loading              true
-set render-loading-bg           "rgba(40,40,40,1)"     # bg
-set render-loading-fg           "rgba(235,219,178,1)"  # fg
+set render-loading-bg           "rgba(28,28,28,1)"     # bg
+set render-loading-fg           "rgba(204,204,204,1)"  # fg
 
-# Recolor book content's color
-set recolor-lightcolor          "rgba(40,40,40,1)"     # bg
-set recolor-darkcolor           "rgba(235,219,178,1)"  # fg
+# Recolor book content
+set recolor-lightcolor          "rgba(28,28,28,1)"     # bg
+set recolor-darkcolor           "rgba(204,204,204,1)"  # fg
 set recolor                     "true"
-set recolor-keephue             "true"                 # keep original color
+set recolor-keephue             "true"
+
 set selection-clipboard clipboard
 
 map <C-i> zoom in
