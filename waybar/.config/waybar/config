@@ -33,7 +33,6 @@
     "hyprland/language": {
         "format-en": "  EN",
         "format-fr": "  FR",
-        "format-uk": "  UA",
         "format-ru": "  RU"
     },
     "clock": {

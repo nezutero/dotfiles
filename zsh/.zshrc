@@ -146,6 +146,8 @@ alias cdf="cd /run/media/nezutero/KINGSTON"
 
 alias readmd="glow"
 
+alias suwayomi="~/.local/bin/suwayomi-server.AppImage"
+
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 export VISUAL="nvim"
