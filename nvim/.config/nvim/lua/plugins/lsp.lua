@@ -4,38 +4,28 @@ require("fidget").setup({})
 
 require("mason-lspconfig").setup {
     ensure_installed = {
-        -- "astro",
         "bashls",
         "clangd",
-        -- "dockerls",
         "eslint",
-        -- "elixirls"
         "gopls",
         "html",
-        -- "htmx",
-        -- "hls",
-        -- "jsonls",
         "ts_ls",
         "marksman",
-        -- "nil_ls",
-        -- "ocamllsp",
-        -- "sqls",
-        -- "pyright",
         "rust_analyzer",
         "lua_ls",
         "zls",
         "cssls",
-        "marksman",
-        -- "yamlls",
     },
     handlers = {
         function(server_name)
-            require("lspconfig")[server_name].setup {}
+            vim.lsp.config[server_name] = {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            }
         end,
 
         ["lua_ls"] = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup {
+            vim.lsp.config.lua_ls = {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -44,11 +34,12 @@ require("mason-lspconfig").setup {
                     }
                 }
             }
-        end
+        end,
+
+        ["ts_ls"] = function()
+            vim.lsp.config.ts_ls = {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            }
+        end,
     }
 }
-
--- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
--- local lspconfig = require("lspconfig").diagnostics { globals = { "vim" } }
-require("lspconfig")["ts_ls"].setup { capabilities = capabilities }

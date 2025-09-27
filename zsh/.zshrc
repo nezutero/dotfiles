@@ -14,8 +14,6 @@ export PATH="$HOME/.local/share/npm/bin:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
 export PATH="$HOME/.local/share/rustup/bin:$PATH"
-export GTK_THEME=Gruvbox-Dark
-export GTK_ICON_THEME=Gruvbox-Plus-Dark
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -179,3 +177,4 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highli
 [ -s "/home/nezutero/.bun/_bun" ] && source "/home/nezutero/.bun/_bun"
 
 export PATH=$PATH:/home/nezutero/.spicetify
+export QT_QPA_PLATFORMTHEME=qt5ct
