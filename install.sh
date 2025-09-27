@@ -3,13 +3,13 @@
 sudo pacman -Syu
 
 sudo pacman -S --noconfirm \
-    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset foot alacritty zen-browser \
+    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset alacritty zen-browser ueberzugpp \
     wl-clipboard grim slurp npm pnpm yarn gimp qt5ct nwg-look wev tmux nextcloud lf android-udev \
     qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat android-tools thunar \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity telegram-desktop \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
-    vesktop ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb \
+    vesktop ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb chafa imagemagick \
     nasm speedcrunch spotify pacman-contrib github-cli ttf-fira-code foliate thunderbird
 
 sudo systemctl enable tlp.service
