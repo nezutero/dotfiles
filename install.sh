@@ -10,7 +10,7 @@ sudo pacman -S --noconfirm \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
     zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
     vesktop ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb chafa imagemagick \
-    nasm speedcrunch spotify pacman-contrib github-cli ttf-fira-code foliate thunderbird
+    nasm speedcrunch spotify pacman-contrib github-cli ttf-fira-code foliate thunderbird cliphist rofi-wayland
 
 sudo systemctl enable tlp.service
 sudo systemctl enable --now tlp
