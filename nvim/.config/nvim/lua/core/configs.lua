@@ -56,5 +56,6 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = { "text", "markdown" },
     callback = function()
         vim.opt_local.linebreak = true
+        vim.opt.conceallevel = 2
     end,
 })

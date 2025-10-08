@@ -28,6 +28,14 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
+  return require("luasnip").expand_or_jump()
+end, { silent = true })
+
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
+  return require("luasnip").jump(-1)
+end, { silent = true })
+
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
