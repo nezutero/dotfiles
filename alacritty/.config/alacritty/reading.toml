@@ -25,7 +25,7 @@ mods = "Super|Shift"
 [selection]
 save_to_clipboard = false
 [window]
-opacity = 0.6
+opacity = 0.8
 [font]
 size = 18
 [window.class]
