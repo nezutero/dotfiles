@@ -34,7 +34,7 @@ mods = "Super|Shift"
 save_to_clipboard = false
 
 [window]
-opacity = 0.8
+opacity = 0.7
 
 [font]
 size = 16.5
