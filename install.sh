@@ -3,17 +3,14 @@
 sudo pacman -Syu
 
 sudo pacman -S --noconfirm \
-    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset alacritty zen-browser ueberzugpp \
-    wl-clipboard grim slurp npm pnpm yarn gimp qt5ct nwg-look wev tmux nextcloud lf android-udev \
-    qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat android-tools thunar \
+    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset alacritty ueberzugpp \
+    wl-clipboard grim slurp npm pnpm yarn gimp qt5ct nwg-look wev tmux brightnessctl cliphist \
+    qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat thunar ripgrep fd \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity telegram-desktop \
-    imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji kdenlive sof-firmware \
-    zathura-pdf-mupdf docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
-    vesktop ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb chafa imagemagick \
-    nasm speedcrunch spotify pacman-contrib github-cli ttf-fira-code foliate thunderbird cliphist rofi-wayland
-
-sudo systemctl enable tlp.service
-sudo systemctl enable --now tlp
+    imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji sof-firmware \
+    docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
+    ncdu noto-fonts noto-fonts-cjk noto-fonts-emoji stow clipmenu tlp gdb chafa imagemagick \
+    nasm speedcrunch spotify pacman-contrib ttf-fira-code foliate thunderbird cliphist rofi-wayland
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -21,7 +18,7 @@ makepkg -si
 cd ..
 rm -rf yay
 
-mkdir -p ~/dev
+mkdir -p ~/projs
 mkdir -p ~/Documents/{Books, Docs}
 mkdir -p ~/Pictures/{walls,screenshots,Webcam,backs}
 mkdir -p ~/Videos/{OBS,Webcam}
@@ -33,7 +30,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 yay -S ttf-jetbrains-mono-nerd
-yay -S gruvbox-dark-gtk gruvbox-plus-icon-theme
+yay -S gruvbox-material-gtk-theme-git gruvbox-plus-icon-theme
 yay -S anki
 yay -S resvg rofi-bluetooth-git
 
