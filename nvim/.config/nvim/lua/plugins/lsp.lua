@@ -1,7 +1,8 @@
+vim.env._JAVA_OPTIONS = "-Djdk.xml.totalEntitySizeLimit=0 -Djdk.xml.entityExpansionLimit=0"
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("fidget").setup({})
-
 require("mason-lspconfig").setup {
     ensure_installed = {
         "bashls",
@@ -18,14 +19,13 @@ require("mason-lspconfig").setup {
         "ltex",
     },
     handlers = {
-        -- Default handler for all servers
         function(server_name)
             vim.lsp.config[server_name] = {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
             }
+            vim.lsp.enable(server_name)
         end,
 
-        -- Lua
         ["lua_ls"] = function()
             vim.lsp.config.lua_ls = {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
@@ -37,40 +37,36 @@ require("mason-lspconfig").setup {
                     }
                 }
             }
+            vim.lsp.enable('lua_ls')
         end,
 
-        -- TS
         ["ts_ls"] = function()
             vim.lsp.config.ts_ls = {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
             }
+            vim.lsp.enable('ts_ls')
         end,
 
-        -- LTeX with custom dictionary
         ["ltex"] = function()
-            -- Read spell words from file
-            local spell_words = {}
-            local dict_path = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
-            local file = io.open(dict_path, "r")
-            if file then
-                for word in file:lines() do
-                    table.insert(spell_words, word)
-                end
-                file:close()
-            end
-
             vim.lsp.config.ltex = {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
+                filetypes = { "markdown", "text", "tex", "gitcommit" },
                 settings = {
                     ltex = {
-                        language = "en-US",
-                        enabled = true,
-                        dictionary = {
-                            ["en-US"] = spell_words,
+                        language = "en-US,fr",
+                        additionalRules = {
+                            enablePickyRules = true,
                         },
-                    },
+                        checkFrequency = "save",
+                    }
                 },
+                on_attach = function(client, bufnr)
+                    require('ltex_extra').setup {
+                        path = vim.fn.expand('~/.config/nvim/ltex'),
+                    }
+                end,
             }
+            vim.lsp.enable('ltex')
         end,
     }
 }

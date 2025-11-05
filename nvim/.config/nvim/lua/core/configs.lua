@@ -11,12 +11,28 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
--- Disable mouse and touchpad
+-- Enable mouse for scrolling only
+vim.opt.mouse = "a"
+
+-- Disable arrow keys
 vim.keymap.set("", "<up>", "<nop>", { noremap = true })
 vim.keymap.set("", "<down>", "<nop>", { noremap = true })
 vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
 vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
-vim.opt.mouse = ""
+
+-- Disable mouse clicks but keep scrolling
+vim.keymap.set("", "<LeftMouse>", "<nop>", { noremap = true })
+vim.keymap.set("", "<RightMouse>", "<nop>", { noremap = true })
+vim.keymap.set("", "<MiddleMouse>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<LeftMouse>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<RightMouse>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<MiddleMouse>", "<nop>", { noremap = true })
+
+-- Disable mouse drag
+vim.keymap.set("", "<LeftDrag>", "<nop>", { noremap = true })
+vim.keymap.set("", "<LeftRelease>", "<nop>", { noremap = true })
+vim.keymap.set("", "<RightDrag>", "<nop>", { noremap = true })
+vim.keymap.set("", "<RightRelease>", "<nop>", { noremap = true })
 
 -- Enable smart indent
 vim.opt.smartindent = true
