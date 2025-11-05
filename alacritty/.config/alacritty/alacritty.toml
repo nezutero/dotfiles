@@ -46,3 +46,7 @@ instance = "Alacritty"
 [window.padding]
 x = 1
 y = 1
+
+[scrolling]
+history = 10000
+multiplier = 1
