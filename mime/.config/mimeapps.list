@@ -6,7 +6,10 @@ application/epub+zip=zathura.desktop
 application/mxf=mpv.desktop
 application/ogg=mpv.desktop
 application/oxps=zathura.desktop
-application/pdf=zathura-2.desktop;
+
+# --- YOUR NEW PDF DEFAULT ---
+application/pdf=zen.desktop;
+
 application/sdp=mpv.desktop
 application/smil+xml=mpv.desktop
 application/vnd.apple.mpegurl=mpv.desktop
@@ -17,6 +20,15 @@ application/vnd.rn-realmedia=mpv.desktop
 application/x-cue=mpv.desktop
 application/x-fictionbook+xml=org.pwmt.zathura-pdf-zathura.desktop
 application/x-matroska=mpv.desktop
+
+# --- FILES THAT SHOULD OPEN IN ONLYOFFICE ---
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=onlyoffice-desktopeditors.desktop
+application/vnd.oasis.opendocument.text=onlyoffice-desktopeditors.desktop
+application/vnd.oasis.opendocument.spreadsheet=onlyoffice-desktopeditors.desktop
+application/vnd.oasis.opendocument.presentation=onlyoffice-desktopeditors.desktop
+
 application/x-shellscript=nvim.desktop
 application/x-shorten=mpv.desktop
 audio/AMR=mpv.desktop
@@ -91,7 +103,3 @@ video/x-ogm+ogg=mpv.desktop
 video/x-theora+ogg=mpv.desktop
 x-scheme-handler/cider=cider.desktop
 x-scheme-handler/discord=vesktop.desktop
-x-scheme-handler/itms=cider.desktop
-x-scheme-handler/itmss=cider.desktop
-x-scheme-handler/itunes=cider.desktop
-x-scheme-handler/music=cider.desktop

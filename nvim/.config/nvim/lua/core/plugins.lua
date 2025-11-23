@@ -145,16 +145,17 @@ require("lazy").setup({
         config = function()
             require("zen-mode").setup({
                 window = {
-                    width = 90, -- Width of the centered window
+                    backdrop = 0.10,
+                    width = 110,
                     options = {
                         number = false,
                         relativenumber = false,
                     }
                 },
+                on_open = function()
+                    vim.api.nvim_set_hl(0, 'ZenBg', { bg = '#141414' })
+                end,
             })
         end
-    },
-    {
-        'barreiroleo/ltex_extra.nvim',
     },
 })

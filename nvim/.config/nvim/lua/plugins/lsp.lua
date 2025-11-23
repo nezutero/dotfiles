@@ -50,23 +50,23 @@ require("mason-lspconfig").setup {
         ["ltex"] = function()
             vim.lsp.config.ltex = {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
-                filetypes = { "markdown", "text", "tex", "gitcommit" },
+                filetypes = { "markdown", "md", "tex", "text" },
+                flags = { debounce_text_changes = 300 },
                 settings = {
                     ltex = {
-                        language = "en-US,fr",
+                        language = "fr",
+                        sentenceCacheSize = 2000,
                         additionalRules = {
                             enablePickyRules = true,
+                            motherTongue = "fr",
                         },
-                        checkFrequency = "save",
+                        trace = { server = "verbose" },
+                        disabledRules = {},
+                        hiddenFalsePositives = {},
                     }
                 },
-                on_attach = function(client, bufnr)
-                    require('ltex_extra').setup {
-                        path = vim.fn.expand('~/.config/nvim/ltex'),
-                    }
-                end,
+                on_attach = on_attach,
             }
-            vim.lsp.enable('ltex')
         end,
     }
 }
