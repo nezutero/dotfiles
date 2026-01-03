@@ -33,6 +33,7 @@ yay -S ttf-jetbrains-mono-nerd
 yay -S gruvbox-material-gtk-theme-git gruvbox-plus-icon-theme
 yay -S anki
 yay -S resvg rofi-bluetooth-git
+yay -S helium-browser-bin
 
 cd "$HOME/dotfiles"
 stow alacritty dunst git gtk fontconfig hypr imv mime mpv nvim rofi swaylock waybar zathura zsh tmux .local glow

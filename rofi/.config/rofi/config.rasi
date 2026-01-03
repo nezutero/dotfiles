@@ -33,7 +33,7 @@ listview {
 }
 window {
     transparency: "real";
-    width: 700px;
+    width: 500px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: @w-border;
