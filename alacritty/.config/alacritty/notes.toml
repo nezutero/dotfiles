@@ -37,7 +37,7 @@ save_to_clipboard = false
 opacity = 1
 
 [font]
-size = 16.5
+size = 13
 
 [window.class]
 general = "Alacritty"

@@ -1,5 +1,5 @@
 * {
-    font: "JetBrainsMono Nerd Font 12";
+    font: "JetBrainsMono Nerd Font 10";
     font-style: bold;
     g-spacing: 10px;
     g-margin: 0;
@@ -17,13 +17,11 @@
     w-border-color: #151515;
     w-padding: 12px;
 }
-
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun: " ";
+    display-drun: " ";
 }
-
 listview {
     columns: 1;
     lines: 5;
@@ -33,7 +31,6 @@ listview {
     scrollbar: false;
     border: 0px solid;
 }
-
 window {
     transparency: "real";
     width: 700px;
@@ -43,29 +40,24 @@ window {
     border-color: @w-border-color;
     padding: @w-padding;
 }
-
 prompt {
     text-color: @fg-color;
 }
-
 inputbar {
     children: ["prompt", "entry"];
     spacing: @g-spacing;
 }
-
 entry {
     placeholder: "";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
 }
-
 mainbox {
     spacing: @g-spacing;
     margin: @g-margin;
     padding: @g-padding;
     children: ["inputbar", "listview", "message"];
 }
-
 element {
     spacing: @g-spacing;
     margin: @g-margin;
@@ -76,27 +68,22 @@ element {
     background-color: transparent;
     text-color: @fg-color;
 }
-
 element normal.normal {
 	background-color: transparent;
 	text-color: @fg-color;
 }
-
 element alternate.normal {
 	background-color: @alt-color;
 	text-color: @fg-color;
 }
-
 element selected.active {
 	background-color: @hl-color;
 	text-color: @hlt-color;
 }
-
 element selected.normal {
 	background-color: @hl-color;
 	text-color: @hlts-color;
 }
-
 message {
     background-color: red;
     border: 0px solid;

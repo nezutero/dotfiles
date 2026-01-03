@@ -27,7 +27,7 @@ save_to_clipboard = false
 [window]
 opacity = 0.8
 [font]
-size = 18
+size = 15
 [window.class]
 general = "Alacritty"
 instance = "Alacritty"

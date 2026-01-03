@@ -7,7 +7,6 @@
         background-color: #d8a657;
     }
 }
-
 @keyframes blink-critical {
     70% {
         color: #000000;
@@ -17,7 +16,6 @@
         background-color: #ea6962;
     }
 }
-
 * {
     border: none;
     border-radius: 0;
@@ -25,16 +23,14 @@
     margin: 0;
     padding: 0;
 }
-
 #waybar {
     background-color: #000000;
     color: #d4be98;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     border-top: 1px solid #3c3836
 }
-
 #battery,
 #clock,
 #cpu,
@@ -52,21 +48,17 @@
     margin: 1px 4px;
     background-color: #000000;
 }
-
 #battery {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 #battery.warning {
     color: #d8a657;
 }
-
 #battery.critical {
     color: #ea6962;
 }
-
 #battery.warning.discharging {
     animation-name: blink-warning;
     animation-duration: 3s;
@@ -74,7 +66,6 @@
     padding-left: 7px;
     padding-right: 7px;
 }
-
 #battery.critical.discharging {
     animation-name: blink-critical;
     animation-duration: 2s;
@@ -82,105 +73,86 @@
     padding-left: 7px;
     padding-right: 7px;
 }
-
 #clock {
     font-weight: bold;
 }
-
 #cpu.warning {
     color: #d8a657;
 }
-
 #cpu.critical {
     color: #ea6962;
 }
-
 #memory {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 #memory.warning {
     color: #d8a657;
 }
-
 #memory.critical {
     color: #ea6962;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
-
 #custom-power {
     font-weight: bold;
 }
-
 #custom-power:hover {
     box-shadow: inherit;
     text-shadow: inherit;
     color: #000000;
     background-color: #d4be98;
 }
-
 #disk.warning {
     color: #d8a657;
 }
-
 #disk.critical {
     color: #ea6962;
 }
-
 #network.disconnected {
     color: #d8a657;
 }
-
 #temperature.critical {
     color: #ea6962;
 }
-
 #window {
     font-weight: bold;
 }
-
 #workspaces button {
     all: initial;
     min-width: 0;
-    padding: 0px 7px;
+    padding: 0px 6px;
     min-height: 0;
     margin: 1;
     border-radius: 4px;
     background-color: #000000;
     color: #d4be98;
-    font-size: 15px;
+    font-size: 12px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
 }
-
 #workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
     color: #000000;
     background-color: #d4be98;
 }
-
 #workspaces button.active {
     color: #000000;
     background-color: #d4be98;
 }
-
 #tags button.occupied {
     transition: none;
     color: #ea6962;
     background: transparent;
     font-size: 4px;
 }
-
 #tags button.focused {
     color: #a9b665;
     border-top: 2px solid #a9b665;
     border-bottom: 2px solid #a9b665;
 }
-
 #tags button:hover {
     transition: none;
     box-shadow: inherit;
@@ -189,15 +161,12 @@
     border-color: #d3869b;
     color: #d3869b;
 }
-
 #tags button.focused:hover {
     color: #d3869b;
 }
-
 #workspaces button.urgent {
     background-color: #ea6962;
 }
-
 tooltip {
     border-radius: 0px;
 }

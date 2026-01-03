@@ -1,6 +1,7 @@
 # See dunst(5) for all configuration options
 
 [global]
+    font = JetBrainsMono Nerd Font 10
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -24,10 +25,10 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = (250, 400)
 
     # The height of a single notification, excluding the frame.
-    height = (0, 300)
+    height = (0, 150)
 
     # Position the notification in the top right corner
     origin = top-right
@@ -126,6 +127,8 @@
     #  * urgency_descending: sort by urgency (critical then normal then low)
     #  * update: sort by update (most recent always at the top)
     sort = yes
+
+    word_wrap = yes
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.

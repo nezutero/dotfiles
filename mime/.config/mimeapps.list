@@ -103,3 +103,4 @@ video/x-ogm+ogg=mpv.desktop
 video/x-theora+ogg=mpv.desktop
 x-scheme-handler/cider=cider.desktop
 x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/freetube=FreeTube.desktop
