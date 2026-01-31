@@ -1,0 +1,7 @@
+theme = Gruvbox Dark Hard
+font-family = JetBrains Mono
+font-size = 13
+background = #000000
+background-opacity = 0.7
+scrollback-limit = 10000
+shell-integration = zsh
