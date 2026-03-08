@@ -3,7 +3,7 @@ import = [
     "~/.config/alacritty/themes/gruvbox_material_medium_dark.toml"
 ]
 [colors.primary]
-background = "#1a1a1a"
+background = "#000000"
 [font.bold]
 family = "JetBrainsMono Nerd Font"
 style = "Bold"
@@ -25,7 +25,7 @@ mods = "Super|Shift"
 [selection]
 save_to_clipboard = false
 [window]
-opacity = 1.0
+opacity = 0.8
 [font]
 size = 14
 [window.class]
