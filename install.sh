@@ -8,7 +8,7 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing packages..."
 sudo pacman -S --noconfirm \
-    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset alacritty firefox-developer-edition \
+    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset alacritty \
     wl-clipboard grim slurp npm pnpm yarn gimp qt5ct nwg-look wev tmux brightnessctl cliphist \
     qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat thunar ripgrep fd glow \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity telegram-desktop \
@@ -38,7 +38,7 @@ yay -S --noconfirm \
     anki \
     resvg \
     rofi-bluetooth-git \
-    zen-browser-bin
+    helix-browser-bin
 
 echo "Creating directories..."
 mkdir -p ~/projs
