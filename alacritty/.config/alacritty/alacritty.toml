@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/gruvbox_material_medium_dark.toml"
+    "~/.config/alacritty/themes/kanagawa_wave.toml"
 ]
 [colors.primary]
 background = "#000000"
@@ -27,7 +27,7 @@ save_to_clipboard = false
 [window]
 opacity = 0.8
 [font]
-size = 14
+size = 15
 [window.class]
 general = "Alacritty"
 instance = "Alacritty"
