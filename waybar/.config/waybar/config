@@ -58,9 +58,8 @@
         "format-icons": [""],
     },
     "backlight": {
-        "format": "{percent}% {icon}",
-        // "format-icons": [" ", " "]
-        "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕"]
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format": "{icon} {percent}%"
     },
     "battery": {
         "states": {
