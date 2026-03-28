@@ -3,13 +3,13 @@
     font-style: bold;
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #d4be98;
-    fg-color: #d4be98;
+    b-color: #c5c9c5;
+    fg-color: #c5c9c5;
     fgp-color: #000000CC;
     b-radius: 13px;
     g-padding: 8px;
-    hl-color: #d4be98;
-    hlt-color: #d4be98;
+    hl-color: #c5c9c5;
+    hlt-color: #c5c9c5;
     hlts-color: #151515;
     alt-color: "transparent";
     wbg-color: #000000CC;

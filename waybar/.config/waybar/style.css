@@ -4,8 +4,8 @@
     }
 
     to {
-        color: #dcd7ba;
-        background-color: #727169;
+        color: #000000;
+        background-color: #c0a36e;
     }
 }
 
@@ -15,7 +15,7 @@
     }
 
     to {
-        color: #dcd7ba;
+        color: #000000;
         background-color: #c34043;
     }
 }
@@ -62,7 +62,7 @@
 }
 
 #battery.warning {
-    color: #727169;
+    color: #c0a36e;
 }
 
 #battery.critical {

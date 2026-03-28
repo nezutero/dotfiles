@@ -13,12 +13,7 @@ require("lazy").setup({
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
-    {
-        "sainnhe/gruvbox-material",
-        priority = 1000,
-        config = true,
-        opts = {},
-    },
+    { "rebelot/kanagawa.nvim" },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
