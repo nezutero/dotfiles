@@ -19,4 +19,12 @@ case $1 in
 		brightnessctl -e4 set 5%-
 		send_notification "$1"
 		;;
+	min)
+		brightnessctl -e4 set 10%
+		send_notification "$1"
+		;;
+	max)
+		brightnessctl -e4 set 100%
+		send_notification "$1"
+		;;
 esac
