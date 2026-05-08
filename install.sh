@@ -14,7 +14,7 @@ sudo pacman -S --noconfirm \
     fastfetch zsh materia-gtk-theme pavucontrol zip unzip tree obs-studio audacity telegram-desktop \
     imv mpv noto-fonts-cjk zig python nodejs ttf-dejavu noto-fonts-emoji sof-firmware \
     docker docker-compose alsa-utils dnsutils distrobox bluez bluez-utils cheese \
-    ncdu noto-fonts stow rofi \
+    ncdu noto-fonts stow rofi shotwell \
     nasm speedcrunch pacman-contrib ttf-fira-code thunderbird \
     neovim yazi imagemagick chafa \
     gdb bat eza fzf
@@ -38,7 +38,7 @@ yay -S --noconfirm \
     anki \
     resvg \
     rofi-bluetooth-git \
-    helix-browser-bin
+    cheese
 
 echo "Creating directories..."
 mkdir -p ~/projs

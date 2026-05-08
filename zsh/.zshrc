@@ -121,6 +121,11 @@ alias gtd="cd $HOME/dotfiles"
 alias gtc="cd $HOME/.config"
 alias gtn="cd $HOME/notes"
 
+jn() {
+  local title="${*:-$(date +%Y-%m-%d)}"
+  nvim ~/notes/journal/"$title".md
+}
+
 alias g="git"
 alias gs="git status"
 alias ga="git add"
@@ -143,8 +148,6 @@ alias umnt="udisksctl unmount -b /dev/sda1"
 alias cdf="cd /run/media/nezutero/KINGSTON"
 
 alias readmd="glow"
-
-alias suwayomi="~/.local/bin/suwayomi-server.AppImage"
 
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
