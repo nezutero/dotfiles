@@ -35,12 +35,23 @@
         "format-fr": "  CA"
     },
     "clock": {
-        "locale":"fr_FR.utf8",
-        "format": " {:L%H:%M:%S ::  %e %B, %A :: (%d/%m/%y)}",
-        "format-alt": " {:L%H:%M:%S ::  %e %B, %A}",
+        "locale": "en_GB.UTF-8",
+        "format": " {:L%H:%M:%S ::  %e %B, %A :: (%d/%m/%y)}",
+        "format-alt": " {:L%H:%M:%S ::  %e %B, %A}",
         "tooltip-format": "<big>{:L%Y %B}</big>\n<tt>{calendar}</tt>",
         "today-format": "<b>{}</b>",
-        "interval": 1
+        "interval": 1,
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "",
+            "on-scroll": 1,
+            "format": {
+                "months":   "<span color='#7fb4ca'><b>{}</b></span>",
+                "days":     "<span color='#c5c9c5'>{}</span>",
+                "weekdays": "<span color='#957fb8'><b>{}</b></span>",
+                "today":    "<span color='#e82424'><b><u>{}</u></b></span>"
+            }
+        }
     },
     "cpu": {
         "format": "CPU {usage}%",
