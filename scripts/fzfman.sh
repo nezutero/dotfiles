@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 selected_path=$(find . -type f -o -type d | fzf)
 if [ -n "$selected_path" ]; then

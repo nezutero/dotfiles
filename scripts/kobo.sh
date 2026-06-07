@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 manga_name=$(basename "$PWD")
 chapters=(Chapitre*)

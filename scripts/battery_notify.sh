@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 LOW_THRESHOLD=15       # low warning %
 CRITICAL_THRESHOLD=5   # critical warning %

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SEARCH_DIRS=("$HOME/Documents" "$HOME/Downloads" "$HOME/Books" "$HOME/notes")
 
