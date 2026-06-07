@@ -1,0 +1,15 @@
+require("core.mappings")
+require("core.configs")
+require("core.plugins")
+require("core.colors")
+
+require("plugins.cmp")
+require("plugins.lsp")
+require("plugins.telescope")
+require("plugins.lualine")
+require("plugins.harpoon")
+require("plugins.treesitter")
+require("plugins.undotree")
+require("plugins.ibl")
+
+require("luasnip.loaders.from_snipmate").lazy_load({ paths = "~/.config/nvim/snippets" })
