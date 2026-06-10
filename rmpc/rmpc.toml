@@ -1,0 +1,4 @@
+[connection]
+socket = "/run/user/1000/mpd/socket"
+host = "127.0.0.1"
+port = 6600
