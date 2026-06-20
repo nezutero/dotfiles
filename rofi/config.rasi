@@ -5,11 +5,12 @@
     g-margin: 0;
     b-color: #c5c9c5;
     fg-color: #c5c9c5;
-    fgp-color: #000000CC;
+    fgp-color: #c5c9c5;
     b-radius: 13px;
     g-padding: 8px;
     hl-color: #c5c9c5;
     hlt-color: #c5c9c5;
+
     hlts-color: #151515;
     alt-color: "transparent";
     wbg-color: #000000CC;
@@ -85,6 +86,6 @@ element selected.normal {
 	text-color: @hlts-color;
 }
 message {
-    background-color: red;
+    background-color: transparent;
     border: 0px solid;
 }
