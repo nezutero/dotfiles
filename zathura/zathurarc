@@ -1,0 +1,43 @@
+set recolor true
+set recolor-darkcolor "#ddd"
+set recolor-lightcolor "#000000"
+
+set guioptions none        # hides statusbar + scrollbar
+# or just hide the statusbar:
+# set guioptions s         # 's' = show scrollbar only, no statusbar
+
+# vim-like zoom
+map + zoom in
+map - zoom out
+map = zoom in
+map zi zoom in
+map zo zoom out
+map z0 zoom default        # reset zoom
+
+# motions
+map j scroll down
+map k scroll up
+map h scroll left
+map l scroll right
+map gg goto top            # go to first page
+map G goto bottom          # go to last page
+map <C-d> scroll half-down
+map <C-u> scroll half-up
+map <C-f> scroll full-down
+map <C-b> scroll full-up
+
+# --- page jumping ---
+# Type a number then G to go to that page (works by default)
+# e.g. 42G → go to page 42
+
+# --- search (already vim-like) ---
+# /word   → search forward
+# ?word   → search backward
+# n / N   → next/prev result
+
+# --- misc useful ---
+map r reload               # reload file
+map R rotate rotate-cw     # rotate page
+map i recolor              # toggle dark/light mode
+map f toggle_fullscreen
+map <Tab> toggle_index     # show/hide table of contents
