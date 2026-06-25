@@ -69,10 +69,6 @@ alias gcl="git clone"
 alias gbd="git branch -D"
 alias gbs="git switch"
 
-alias f="$HOME/.local/bin/fzfman.sh"
-alias cht="$HOME/.local/bin/chtman.sh"
-alias timer="$HOME/.local/bin/timer.sh"
-
 alias mnt="udisksctl mount -b /dev/sda1"
 alias umnt="udisksctl unmount -b /dev/sda1"
 alias cdf="cd /run/media/nezutero/KINGSTON"
