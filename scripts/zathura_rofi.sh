@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SEARCH_DIRS=("$HOME/Documents" "$HOME/Downloads" "$HOME/Books" "$HOME/notes")
+SEARCH_DIRS=("$HOME/docs" "$HOME/Downloads" "$HOME/books" "$HOME/notes")
 
 mapfile -d '' FILES < <(fd . "${SEARCH_DIRS[@]}" -e pdf -e epub -0)
 
