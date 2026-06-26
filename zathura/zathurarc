@@ -2,7 +2,7 @@ set recolor true
 set recolor-darkcolor "#ddd"
 set recolor-lightcolor "#000000"
 
-set guioptions none        # hides statusbar + scrollbar
+# set guioptions none        # hides statusbar + scrollbar
 # or just hide the statusbar:
 # set guioptions s         # 's' = show scrollbar only, no statusbar
 
