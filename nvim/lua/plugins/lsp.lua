@@ -2,51 +2,31 @@ return {
     "neovim/nvim-lspconfig",
 
     dependencies = {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp",
         "j-hui/fidget.nvim",
     },
 
     config = function()
-        vim.env._JAVA_OPTIONS =
-        "-Djdk.xml.totalEntitySizeLimit=0 -Djdk.xml.entityExpansionLimit=0"
-
         local capabilities =
-        require("cmp_nvim_lsp").default_capabilities()
-
-        require("mason").setup()
-
-        require("mason-lspconfig").setup({
-            ensure_installed = {
-                "bashls",
-                "clangd",
-                "eslint",
-                "gopls",
-                "html",
-                "ts_ls",
-                "marksman",
-                "rust_analyzer",
-                "lua_ls",
-                "zls",
-                "cssls",
-                "nil_ls",
-            },
-        })
+            require("cmp_nvim_lsp").default_capabilities()
 
         local servers = {
             bashls = {},
+
             clangd = {
-                cmd = { vim.fn.exepath("clangd") },
+                cmd = {
+                    "clangd",
+                    "--background-index",
+                    "--query-driver=/run/current-system/sw/bin/*",
+                },
             },
-            eslint = {},
+
             gopls = {},
             html = {},
-            ts_ls = {},
-            marksman = {},
+            cssls = {},
             rust_analyzer = {},
             zls = {},
-            cssls = {},
+            marksman = {},
             nil_ls = {},
 
             lua_ls = {
