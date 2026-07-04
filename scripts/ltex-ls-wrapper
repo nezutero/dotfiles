@@ -1,3 +1,0 @@
-#!/bin/bash
-export _JAVA_OPTIONS="-Djdk.xml.totalEntitySizeLimit=0 -Djdk.xml.entityExpansionLimit=0"
-exec ltex-ls "$@"
