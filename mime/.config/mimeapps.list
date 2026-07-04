@@ -7,7 +7,6 @@ application/mxf=mpv.desktop
 application/ogg=mpv.desktop
 application/oxps=zathura.desktop
 
-# --- YOUR NEW PDF DEFAULT ---
 application/pdf=zen.desktop;
 
 application/sdp=mpv.desktop

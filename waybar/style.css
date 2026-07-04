@@ -165,6 +165,7 @@
     background-color: #c5c9c5;
 }
 
+/* IF SWAY -> button.focused */
 #workspaces button.active {
     color: #000000;
     background-color: #c5c9c5;

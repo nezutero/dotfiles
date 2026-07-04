@@ -1,0 +1,25 @@
+ignore-empty-password
+daemonize
+
+image=/home/nezutero/walls/your_name_sky1.jpg
+scaling=fill
+
+font=JetBrainsMono Nerd Font
+font-size=24
+
+indicator
+indicator-radius=120
+indicator-thickness=7
+
+inside-color=11111b
+ring-color=cdd6f4
+text-color=cdd6f4
+
+key-hl-color=fab387
+bs-hl-color=f38ba8
+
+line-color=00000000
+separator-color=00000000
+inside-clear-color=11111b
+inside-ver-color=11111b
+inside-wrong-color=11111b
