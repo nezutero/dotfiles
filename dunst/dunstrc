@@ -28,6 +28,7 @@
     horizontal_padding = 15
     text_icon_padding = 0
     frame_width = 1
+    highlight = "#c5c9c5"
     frame_color = "#c5c9c5"
     gap_size = 10
     separator_color = frame
@@ -93,3 +94,6 @@
 [backlight]
     appname = "Backlight"
     highlight = "#c5c9c5"
+
+[volume]
+    appname = "Volume"
