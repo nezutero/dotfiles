@@ -21,7 +21,7 @@ notify_title="rofipass"
 # Terminal to use
 # This is only used to open a terminal to interact with "tomb" to open
 # and close your encrypted passwordstore, since it requires sudo or doas
-term=${term:-kitty}
+term=${term:-foot}
 
 # Waiting time to clear your clipboard in seconds
 time=${time:-5}
@@ -94,8 +94,8 @@ Options:
   -T <TIME>     Clearing time in seconds
 
 Example:
-  rofipass -f -l 72 -t kitty -e emacs -T 10
-  rofipass -f -l 72 -t kitty -e "st -e nvim" -T 10
+  rofipass -f -l 72 -t foot -e emacs -T 10
+  rofipass -f -l 72 -t foot -e "st -e nvim" -T 10
 EOF
 }
 
