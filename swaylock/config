@@ -11,15 +11,24 @@ indicator
 indicator-radius=120
 indicator-thickness=7
 
-inside-color=11111b
-ring-color=cdd6f4
-text-color=cdd6f4
+# base
+inside-color=1D1C19
+ring-color=c5c9c5
+text-color=c5c9c5
 
-key-hl-color=fab387
-bs-hl-color=f38ba8
+# key press / backspace
+key-hl-color=c4b28a
+bs-hl-color=c4746e
+
+# state rings (verifying / wrong / cleared)
+ring-ver-color=8ba4b0
+ring-wrong-color=c4746e
+ring-clear-color=87a987
+
+# state fill (keep matching base so the circle doesn't flash white)
+inside-clear-color=1D1C19
+inside-ver-color=1D1C19
+inside-wrong-color=1D1C19
 
 line-color=00000000
 separator-color=00000000
-inside-clear-color=11111b
-inside-ver-color=11111b
-inside-wrong-color=11111b
