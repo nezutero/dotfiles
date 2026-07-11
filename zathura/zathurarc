@@ -6,6 +6,11 @@ set recolor-lightcolor "#000000"
 # or just hide the statusbar:
 # set guioptions s         # 's' = show scrollbar only, no statusbar
 
+# --- clipboard ---
+set selection-clipboard clipboard
+set copy-select false
+set selection-notification false
+
 # vim-like zoom
 map + zoom in
 map - zoom out
