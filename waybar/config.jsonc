@@ -4,29 +4,20 @@
     "spacing": 3,
     "modules-left": [
         "hyprland/workspaces",
-        "custom/separator",
         "clock",
     ],
     "modules-center": [
     ],
     "modules-right": [
         "disk",
-        "custom/separator",
         "memory", 
-        "custom/separator",
         "cpu", 
         "temperature", 
-        "custom/separator",
         "hyprland/language",
-        "custom/separator",
         "network", 
-        "custom/separator",
         "bluetooth",
-        "custom/separator",
         "pulseaudio", 
-        "custom/separator",
         "backlight",
-        "custom/separator",
         "battery",
     ],
     "hyprland/language": {
@@ -101,8 +92,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} | {format_source}",
-        "format-bluetooth": "{volume}% {icon} () | {format_source}",
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} () {format_source}",
         "format-bluetooth-muted": "{icon} () {format_source}",
         "format-muted": "{format_source}",
         "format-source": "{volume}% ",
@@ -113,14 +104,10 @@
         "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
         "on-click-right": "pavucontrol"
     },
-    "custom/separator": {
-        "format": "|",
-        "interval": "once",
-        "tooltip": false
-    },
     "bluetooth": {
         "format": "󰂯 {status}",
-        "format-disabled": "󰂲",
+        "format-disabled": "",
+        "format-off": "",
         "format-connected": "󰂱 {num_connections}",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",

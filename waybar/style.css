@@ -52,6 +52,8 @@
     min-height: 0;
     border-radius: 0px;
     margin: 1px 4px;
+    padding-left: 8px;
+    border-left: 1px solid #3c3836;
     background-color: #000000;
 }
 
