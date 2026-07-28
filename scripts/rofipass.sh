@@ -233,13 +233,7 @@ main() {
 
   HELP=""
 
-  HELP="$HELP<span color='${help_color}'>${kb_add_pass}</span><span color='${div_color}'>: Add | </span><span color='${help_color}'>${kb_delete}</span><span color='${div_color}'>: Delete | </span><span color='${help_color}'>${kb_edit}</span><span color='${div_color}'>: Edit</span>
-"
-  ZBAR_HELP="<span color='${help_color}'>${kb_add_otp}</span><span color='${div_color}'>: Add OTP | </span>"
-  HELP="$HELP$ZBAR_HELP"
-
-  HELP="$HELP<span color='${help_color}'>Enter</span><span color='${div_color}'>: Copy Password | </span><span color='${help_color}'>${kb_copy_email}</span>
-  <span color='${div_color}'>: Copy Email |</span>"
+  HELP="$HELP<span color='${help_color}'>${kb_copy_email}</span><span color='${div_color}'>: Copy Email | </span>"
 
   if [ "$enable_otp" -eq 0 ]; then
       OTP_HELP="<span color='${help_color}'>${kb_copy_otp}</span><span color='${div_color}'>: Copy OTP</span>"

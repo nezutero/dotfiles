@@ -15,7 +15,7 @@
         "temperature", 
         "hyprland/language",
         "network", 
-        "bluetooth",
+        // "bluetooth",
         "pulseaudio", 
         "backlight",
         "battery",
