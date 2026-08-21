@@ -10,3 +10,11 @@
 git clone https://github.com/nezutero/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
+
+- This will install all the necessary packages and create folders. 
+> WARNING: Only for Arch Linux and Arch-based distros. Also, this is my personal stuff, so you might want to change the packages in the script. DO NOT RUN THIS SCRIPT IF YOU DON'T KNOW WHAT IT DOES.
+
+```sh
+chmod +x install.sh
+./install.sh 
+```
