@@ -14,8 +14,8 @@ sudo pacman -S --noconfirm \
     fastfetch zsh pavucontrol zip unzip tree obs-studio audacity telegram-desktop \
     imv mpv noto-fonts-cjk python nodejs ttf-dejavu noto-fonts-emoji docker gdb fzf \
     docker-compose alsa-utils dnsutils distrobox cheese ncdu noto-fonts stow rofi \
-    nasm speedcrunch pacman-contrib ttf-fira-code thunderbird neovim yazi imagemagick
-    signal-desktop foot git curl
+    nasm pacman-contrib ttf-fira-code thunderbird neovim yazi imagemagick foot git \
+    signal-desktop curl jdk-openjdk python base-devel nodejs npm opam ocaml
 
 echo "Installing yay..."
 if ! command -v yay &> /dev/null; then
