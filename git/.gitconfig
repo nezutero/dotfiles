@@ -7,6 +7,12 @@
 	user = nezutero
 [credential]
 	helper = cache
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@codeberg.org:"]
+	insteadOf = https://codeberg.org/
 [init]
 	defaultBranch = main
 [core]
