@@ -2,16 +2,35 @@ return {
     "neovim/nvim-lspconfig",
 
     dependencies = {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp",
         "j-hui/fidget.nvim",
     },
 
     config = function()
+        require("mason").setup()
+        require("mason-lspconfig").setup({
+            ensure_installed = {
+                "pyright",
+                "clangd",
+                "jdtls",
+                "lua_ls",
+                "gopls",
+                "html",
+                "cssls",
+                "rust_analyzer",
+                "zls",
+                "bashls",
+            },
+            automatic_installation = true,
+        })
+
         local capabilities =
             require("cmp_nvim_lsp").default_capabilities()
 
         local servers = {
-            bashls = {},
+            pyright = {},
 
             clangd = {
                 cmd = {
@@ -21,13 +40,7 @@ return {
                 },
             },
 
-            gopls = {},
-            html = {},
-            cssls = {},
-            rust_analyzer = {},
-            zls = {},
-            marksman = {},
-            nil_ls = {},
+            jdtls = {},
 
             lua_ls = {
                 settings = {
@@ -38,6 +51,18 @@ return {
                     },
                 },
             },
+
+            gopls = {},
+
+            html = {},
+
+            cssls = {},
+
+            rust_analyzer = {},
+
+            zls = {},
+
+            bashls = {},
         }
 
         for server, opts in pairs(servers) do
