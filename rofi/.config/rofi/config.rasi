@@ -1,5 +1,5 @@
 * {
-    font: "JetBrainsMono Nerd Font 10";
+    font: "JetBrainsMono Nerd Font 10.5";
     font-style: bold;
     g-spacing: 10px;
     g-margin: 0;
@@ -21,7 +21,7 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun: " ";
+    display-drun: ">";
 }
 listview {
     columns: 1;

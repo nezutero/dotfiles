@@ -36,7 +36,12 @@ end)
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 hl.env("XCURSOR_THEME", "Adwaita")
 hl.env("XCURSOR_SIZE", "24")
-hl.env("PATH", os.getenv("HOME") .. "/.local/bin:" .. os.getenv("PATH"))
+hl.env(
+    "PATH",
+    os.getenv("HOME") ..
+    "/.local/bin:" ..
+    "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+)
 
 -- xwayland
 hl.config({
@@ -160,7 +165,7 @@ hl.bind(
 -- zathura launcher
 hl.bind(
     mainMod .. " + R",
-    hl.dsp.exec_cmd("zathura_rofi.sh")
+    hl.dsp.exec_cmd("zathura-rofi.sh")
 )
 
 -- notes
