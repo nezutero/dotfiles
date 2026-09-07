@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # This script defines just a mode for rofi instead of being a self-contained
 # executable that launches rofi by itself. This makes it more flexible than

@@ -17,6 +17,16 @@ export PATH="$HOME/.local/share/rustup/bin:$PATH"
 
 # User configuration
 
+# Oh My Zsh configuration
+ZSH_THEME="robbyrussell"
+
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+source "$ZSH/oh-my-zsh.sh"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -50,11 +60,6 @@ alias gtp="$HOME/projs && clear && ls -a"
 alias gtd="cd $HOME/dotfiles"
 alias gtc="cd $HOME/.config"
 alias gtn="cd $HOME/notes"
-
-jn() {
-  local title="${*:-$(date +%Y-%m-%d)}"
-  nvim ~/notes/journal/"$title".md
-}
 
 alias g="git"
 alias gs="git status"

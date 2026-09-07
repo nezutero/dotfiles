@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 choice=$(echo -e "YouTube\nLocal Videos" | rofi -dmenu -p "Choose:")
 if [ -z "$choice" ]; then

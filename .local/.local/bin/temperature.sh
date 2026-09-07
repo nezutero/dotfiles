@@ -1,4 +1,5 @@
 #!/bin/sh
+
 TEMP_FILE="/tmp/hyprsunset_temp"
 DEFAULT_TEMP=4500
 STEP=200
