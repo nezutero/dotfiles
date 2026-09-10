@@ -15,7 +15,7 @@ sudo pacman -S --noconfirm \
     imv mpv noto-fonts-cjk python nodejs ttf-dejavu noto-fonts-emoji docker gdb fzf \
     docker-compose alsa-utils dnsutils distrobox cheese ncdu noto-fonts stow rofi \
     nasm pacman-contrib ttf-fira-code thunderbird neovim yazi imagemagick foot git \
-    signal-desktop curl jdk-openjdk python base-devel nodejs npm opam ocaml
+    signal-desktop curl jdk-openjdk python base-devel nodejs npm opam ocaml hugo
 
 echo "Installing yay..."
 if ! command -v yay &> /dev/null; then
@@ -138,6 +138,9 @@ if [ "$SHELL" != "$(which zsh)" ]; then
 else
     echo "Zsh is already the default shell."
 fi
+
+echo "Setting up hibernation + zram..."
+bash "$(./setup "$0")/hibernation_zram.sh"
 
 echo "============================================"
 echo "Installation complete!"
