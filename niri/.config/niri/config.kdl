@@ -4,6 +4,10 @@ output "eDP-1" {
     position x=0 y=0
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 environment {
     QT_QPA_PLATFORMTHEME "qt5ct"
     XCURSOR_THEME "Adwaita"
@@ -61,6 +65,8 @@ prefer-no-csd
 // tied to niri.service instead (see the .service files) — this is
 // niri's own documented recommended pattern: restart-on-failure and
 // `systemctl --user status <name>` for free, instead of spawn-at-startup.
+spawn-at-startup "waybar"
+spawn-at-startup "gammastep" "-O" "4000" "-P"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "battery-notify.sh"
