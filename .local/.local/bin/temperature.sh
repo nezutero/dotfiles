@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TEMP_FILE="/tmp/hyprsunset_temp"
+TEMP_FILE="/tmp/gammastep_temp"
 DEFAULT_TEMP=4500
 STEP=200
 MIN_TEMP=1000
@@ -29,6 +29,5 @@ case $1 in
 esac
 
 echo "$new" > "$TEMP_FILE"
-killall -w hyprsunset
-hyprsunset -t "$new" &
+gammastep -O "$new" -P
 send_notification "$new"

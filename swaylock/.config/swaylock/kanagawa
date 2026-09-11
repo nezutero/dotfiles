@@ -1,0 +1,39 @@
+ignore-empty-password
+daemonize
+
+image=/home/nezutero/pics/walls/your_name_sky_night.jpg
+scaling=fill
+
+font=JetBrainsMono Nerd Font
+font-size=34
+
+indicator-radius=120
+indicator-thickness=15
+
+# base — sumiInk1 at ~80% opacity
+inside-color=1F1F28cc
+ring-color=7E9CD8
+
+# key press / backspace — boatYellow2 / autumnRed
+key-hl-color=C0A36E
+bs-hl-color=C34043
+
+# text (all states covered) — fujiWhite
+text-color=DCD7BA
+text-clear-color=DCD7BA
+text-ver-color=DCD7BA
+text-wrong-color=DCD7BA
+text-caps-lock-color=DCD7BA
+
+# state rings (verifying / wrong / cleared) — waveAqua / autumnRed / springGreen
+ring-ver-color=7AA89F
+ring-wrong-color=C34043
+ring-clear-color=98BB6C
+
+# state fill (kept matching base, same alpha)
+inside-clear-color=1F1F28cc
+inside-ver-color=1F1F28cc
+inside-wrong-color=1F1F28cc
+
+line-color=00000000
+separator-color=00000000

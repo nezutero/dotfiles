@@ -3,7 +3,7 @@
     "height": 9,
     "spacing": 1,
     "modules-left": [
-        "hyprland/workspaces",
+        "niri/workspaces",
         "clock",
     ],
     "modules-center": [
@@ -13,14 +13,14 @@
         "memory", 
         "cpu", 
         "temperature", 
-        "hyprland/language",
+        "niri/language",
         "network", 
         // "bluetooth",
         "pulseaudio", 
         "backlight",
         "battery",
     ],
-    "hyprland/language": {
+    "niri/language": {
         "format-en": "  EN",
         "format-fr": "  CA"
     },

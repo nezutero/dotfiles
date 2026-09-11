@@ -1,34 +1,34 @@
 ignore-empty-password
 daemonize
 
-image=/home/nezutero/walls/your_name_sky1.jpg
+image=/home/nezutero/pics/walls/your_name_sky_night.jpg
 scaling=fill
 
 font=JetBrainsMono Nerd Font
-font-size=24
+font-size=36
 
-indicator
 indicator-radius=120
-indicator-thickness=7
+indicator-thickness=15
 
-# base
-inside-color=1D1C19
-ring-color=c5c9c5
-text-color=c5c9c5
+inside-color=1a1b26cc
+ring-color=7aa2f7
 
-# key press / backspace
-key-hl-color=c4b28a
-bs-hl-color=c4746e
+key-hl-color=9d7cd8
+bs-hl-color=f7768e
 
-# state rings (verifying / wrong / cleared)
-ring-ver-color=8ba4b0
-ring-wrong-color=c4746e
-ring-clear-color=87a987
+text-color=c0caf5
+text-clear-color=c0caf5
+text-ver-color=c0caf5
+text-wrong-color=c0caf5
+text-caps-lock-color=c0caf5
 
-# state fill (keep matching base so the circle doesn't flash white)
-inside-clear-color=1D1C19
-inside-ver-color=1D1C19
-inside-wrong-color=1D1C19
+ring-ver-color=7dcfff
+ring-wrong-color=f7768e
+ring-clear-color=9ece6a
+
+inside-clear-color=1a1b26cc
+inside-ver-color=1a1b26cc
+inside-wrong-color=1a1b26cc
 
 line-color=00000000
 separator-color=00000000

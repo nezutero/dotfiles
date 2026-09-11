@@ -9,13 +9,14 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing packages..."
 sudo pacman -S --noconfirm \
-    zathura dunst btop waybar hypridle hyprlock hyprpaper hyprsunset wl-clipboard \
+    zathura dunst btop waybar wl-clipboard \
     grim slurp gimp qt5ct wev tmux brightnessctl cliphist dnsmasq vde2 ripgrep fd \
     fastfetch zsh pavucontrol zip unzip tree obs-studio audacity telegram-desktop \
     imv mpv noto-fonts-cjk python nodejs ttf-dejavu noto-fonts-emoji docker gdb fzf \
     docker-compose alsa-utils dnsutils distrobox cheese ncdu noto-fonts stow rofi \
     nasm pacman-contrib ttf-fira-code thunderbird neovim yazi imagemagick foot git \
-    signal-desktop curl jdk-openjdk python base-devel nodejs npm opam ocaml hugo
+    signal-desktop curl jdk-openjdk python base-devel nodejs npm opam ocaml hugo \
+    grub-btrfsd inotify-tools
 
 echo "Installing yay..."
 if ! command -v yay &> /dev/null; then
@@ -71,7 +72,7 @@ if [ -d "$HOME/dotfiles" ]; then
         git \
         gtk \
         fontconfig \
-        hypr \
+        niri \
         imv \
         mime \
         mpv \

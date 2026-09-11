@@ -1,0 +1,169 @@
+output "eDP-1" {
+    mode "1920x1080@60.020"
+    scale 1.2
+    position x=0 y=0
+}
+
+environment {
+    QT_QPA_PLATFORMTHEME "qt5ct"
+    XCURSOR_THEME "Adwaita"
+    XCURSOR_SIZE "24"
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ca"
+            options "caps:escape,grp:alt_space_toggle"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        accel-speed -0.1
+    }
+
+}
+
+layout {
+    gaps 0
+
+    // New windows open taking the full output width — each one is its
+    // own "space" you scroll between with Mod+H / Mod+L, closer to
+    // traditional full-screen workspaces than niri's usual side-by-side
+    // columns.
+    default-column-width { proportion 1.0; }
+
+    // Niri draws TWO separate outlines: focus-ring (around the focused
+    // window) and border (around all windows). Both need to be off for
+    // zero decoration — this was the bug, I'd only turned off border.
+    focus-ring {
+        off
+    }
+
+    border {
+        off
+    }
+}
+
+animations {
+    off
+}
+
+prefer-no-csd
+
+// ===== Startup =====
+// waybar, swaybg, swayidle, and dunst run as systemd --user services
+// tied to niri.service instead (see the .service files) — this is
+// niri's own documented recommended pattern: restart-on-failure and
+// `systemctl --user status <name>` for free, instead of spawn-at-startup.
+spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
+spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
+spawn-at-startup "battery-notify.sh"
+spawn-at-startup "swaybg" "-i" "/home/nezutero/pics/walls/your_name_sky1.jpg" "-m" "fill"
+spawn-at-startup "swayidle" "-w" \
+    "timeout" "600" "brightnessctl -e4 -s set 25%" \
+    "resume" "brightnessctl -r" \
+    "timeout" "1200" "swaylock" \
+    "timeout" "1800" "niri msg action power-off-monitors" \
+    "resume" "niri msg action power-on-monitors" \
+    "timeout" "2400" "systemctl suspend" \
+    "before-sleep" "swaylock"
+
+binds {
+    Mod+Return { spawn "foot"; }
+    Mod+F { spawn "zen-browser"; }
+    Mod+W { close-window; }
+    Mod+E { spawn "foot" "-e" "yazi"; }
+    Mod+B { spawn "rofi-bluetooth"; }
+    Mod+Y { spawn "youtube-mpv.sh"; }
+    Mod+R { spawn "zathura-rofi.sh"; }
+    Mod+N { spawn "foot" "-D" "$HOME/notes" "-e" "nvim" "."; }
+
+    // Keeping rofi (via xwayland-satellite) so rofipass.sh,
+    // rofi-power-menu.sh, and zathura-rofi.sh need zero changes. Swap to
+    // `spawn "fuzzel"` later if you want off XWayland entirely — those
+    // scripts would then need `rofi -dmenu` -> `fuzzel --dmenu`.
+    Mod+Space { spawn "rofi" "-show" "drun"; }
+
+    Mod+P { spawn "rofipass.sh"; }
+    Mod+C { spawn "sh" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+    Mod+A { spawn "sh" "-c" "GDK_BACKEND=x11 audacity"; }
+    Mod+S { spawn "foot" "--title" "rmpc" "-e" "sh" "-c" "rmpc update && rmpc"; }
+    Mod+D { spawn "vesktop"; }
+    Mod+G { spawn "signal-desktop"; }
+
+    Mod+M { spawn "waybar"; }
+    Mod+Shift+M { spawn "pkill" "waybar"; }
+
+    Mod+Shift+L { spawn "swaylock"; }
+
+    // Column / window navigation — niri's model is columns (left/right)
+    // plus windows-within-a-column (up/down), not a uniform grid like
+    // dwindle. Similar result, different underlying concept.
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up    { focus-window-up; }
+    Mod+Down  { focus-window-down; }
+
+    // Same navigation, vim motions. h/l move between "spaces" (columns),
+    // j/k move within one if it ever holds more than one window.
+    Mod+H { focus-column-left; }
+    Mod+L { focus-column-right; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+
+    // Zoomed-out view of all columns — the "global view" you're after.
+    // Verify the exact action name with `niri msg action` if this
+    // doesn't fire; I'm confident but not certain it's toggle-overview.
+    Mod+O { toggle-overview; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
+    Mod+Shift+0 { move-window-to-workspace 10; }
+
+    Mod+Tab { focus-workspace-previous; }
+
+    Mod+WheelScrollDown { focus-workspace-down; }
+    Mod+WheelScrollUp   { focus-workspace-up; }
+
+    Print { screenshot; }
+    Mod+Print { screenshot-screen; }
+
+    XF86MonBrightnessUp   { spawn "backlight.sh" "up"; }
+    XF86MonBrightnessDown { spawn "backlight.sh" "down"; }
+    Mod+XF86MonBrightnessUp   { spawn "backlight.sh" "max"; }
+    Mod+XF86MonBrightnessDown { spawn "backlight.sh" "min"; }
+    Ctrl+XF86MonBrightnessUp   { spawn "temperature.sh" "up"; }
+    Ctrl+XF86MonBrightnessDown { spawn "temperature.sh" "down"; }
+
+    XF86AudioRaiseVolume { spawn "volume.sh" "up"; }
+    XF86AudioLowerVolume { spawn "volume.sh" "down"; }
+    XF86AudioMute        { spawn "volume.sh" "mute"; }
+    XF86AudioMicMute     { spawn "wpctl" "set-mute" "@DEFAULT_SOURCE@" "toggle"; }
+
+    XF86Favorites { spawn "rofi" "-show" "power-menu" "-modi" "power-menu:rofi-power-menu.sh"; }
+    XF86Tools     { spawn "foot" "-D" "$HOME/dotfiles" "-e" "nvim" "."; }
+}
