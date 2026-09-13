@@ -7,11 +7,11 @@
     settings = {
       mainBar = {
         position = "bottom";
-        height = 9;
+        height = 10;
         spacing = 1;
 
         modules-left = [
-          "hyprland/workspaces"
+          "sway/workspaces"
           "clock"
         ];
 
@@ -22,7 +22,7 @@
           "memory"
           "cpu"
           "temperature"
-          "hyprland/language"
+          "sway/language"
           "network"
           # "bluetooth"
           "pulseaudio"
@@ -30,9 +30,9 @@
           "battery"
         ];
 
-        "hyprland/language" = {
-          format-en = "  EN";
-          format-fr = "  CA";
+        "sway/language" = {
+          format = "  {shortDescription}";
+          on-click = "swaymsg input type:keyboard xkb_switch_layout next";
         };
 
         clock = {

@@ -4,7 +4,6 @@
   imports = [
     ./git.nix
     ./gtk.nix
-    ./mpd.nix
     ./ssh.nix
     ./xdg.nix
     ./shell.nix
@@ -15,10 +14,12 @@
     ./zathura.nix
     ./fastfetch.nix
     ./scripts.nix
+    ./swaylock.nix
 
-    ./hyprland
     ./waybar
+    ./sway
     ./nvim
+    ./hyprland
     ./rofi
     ./zen
   ];

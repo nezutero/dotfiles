@@ -1,0 +1,149 @@
+set $mod Mod4
+set $term foot
+set $fileManager yazi
+set $menu rofi -show drun
+set $editor nvim
+set $browser zen-browser
+set $player $term --title rmpc -e sh -c "rmpc update && rmpc"
+
+output eDP-1 resolution 1920x1080@60Hz position 0,0 scale 1.2
+output eDP-1 bg ~/Pictures/walls/your_name_sky1.jpg fill
+
+seat seat0 xcursor_theme Adwaita 24
+seat seat0 hide_cursor 3000
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec systemctl --user start graphical-session.target
+
+exec waybar
+exec dunst -config ~/.config/dunst/dunstrc
+exec clipmenud
+exec battery_notify.sh
+exec wlsunset -t 3500 -T 4000 # night->day transition
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+
+input "type:keyboard" {
+    xkb_layout "us,ca"
+    xkb_options "caps:escape,grp:alt_space_toggle"
+}
+input "type:touchpad" {
+    tap enabled
+    click_method clickfinger
+    natural_scroll enabled
+    pointer_accel -0.1
+}
+input "type:pointer" {
+    pointer_accel -0.1
+}
+# confirm the exact identifier with `swaymsg -t get_inputs`
+input "epic-mouse-v1" {
+    pointer_accel 0.2
+}
+focus_follows_mouse yes
+
+bindgesture swipe:3:right workspace prev
+bindgesture swipe:3:left workspace next
+
+gaps inner 0
+gaps outer 0
+default_border pixel 0
+default_floating_border pixel 0
+
+client.focused          #595959 #595959 #ffffff #595959 #595959
+client.focused_inactive #595959 #595959 #ffffff #595959 #595959
+client.unfocused        #595959 #595959 #ffffff #595959 #595959
+client.urgent           #9b0000 #9b0000 #ffffff #9b0000 #9b0000
+
+# blur is the only decoration.* effect Hyprland actually had enabled.
+# animations were OFF in Hyprland, so duration is 0 here — your SwayFX
+# draft turned them on (150ms) and added corner radius/shadows on top;
+# say the word if you want those folded back in
+# blur enable
+# blur_radius 3
+# blur_passes 1
+# animation_duration_ms 0
+# no sway equivalent exists for xwayland.force_zero_scaling — open
+# upstream feature request, not implemented as of now
+
+floating_modifier $mod normal
+
+bindsym $mod+Return exec $term
+bindsym $mod+F      exec $browser
+bindsym $mod+W      kill
+bindsym $mod+E      exec $term -e $fileManager
+bindsym $mod+B      exec rofi-bluetooth
+bindsym $mod+H      exec youtube-mpv.sh
+bindsym $mod+R      exec zathura-rofi.sh
+bindsym $mod+N      exec $term -D $HOME/notes -e $editor .
+
+# no need to force-focus rofi like hyprctl dispatch focuswindow did —
+# sway focuses new windows by default
+bindsym $mod+space exec $menu
+bindsym $mod+P exec rofipass.sh
+bindsym $mod+C exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+bindsym $mod+A exec GDK_BACKEND=x11 audacity
+bindsym $mod+S exec $player
+bindsym $mod+D exec vesktop
+bindsym $mod+G exec signal-desktop
+
+bindsym $mod+M exec waybar
+bindsym $mod+K exec pkill waybar
+
+bindsym $mod+L exec swaylock
+
+bindsym $mod+Left  focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up    focus up
+bindsym $mod+Down  focus down
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+bindsym --whole-window $mod+button4 workspace prev
+bindsym --whole-window $mod+button5 workspace next
+
+bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png && \
+    dunstify -a "Screenshot" -u low -r 9001 -t 1500 "Screenshot" "Copied to clipboard"
+
+bindsym $mod+Print exec FILE=$HOME/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png && \
+    grim -g "$(slurp)" "$FILE" && \
+    dunstify -a "Screenshot" -u low -r 9002 -t 1500 "Screenshot Saved" "$FILE"
+
+bindsym --locked XF86MonBrightnessUp   exec backlight.sh up
+bindsym --locked XF86MonBrightnessDown exec backlight.sh down
+bindsym $mod+XF86MonBrightnessUp   exec backlight.sh max
+bindsym $mod+XF86MonBrightnessDown exec backlight.sh min
+bindsym Ctrl+XF86MonBrightnessUp   exec temperature.sh up
+bindsym Ctrl+XF86MonBrightnessDown exec temperature.sh down
+
+bindsym --locked XF86AudioRaiseVolume exec volume.sh up
+bindsym --locked XF86AudioLowerVolume exec volume.sh down
+bindsym --locked XF86AudioMute        exec volume.sh mute
+bindsym --locked XF86AudioMicMute     exec wpctl set-mute @DEFAULT_SOURCE@ toggle
+
+bindsym XF86Favorites exec rofi -show power-menu -modi power-menu:rofi-power-menu.sh
+bindsym XF86Tools     exec $term -D $HOME/dotfiles -e $editor .
+
+include /etc/sway/config.d/*

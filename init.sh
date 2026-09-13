@@ -37,7 +37,7 @@ else
 fi
 
 echo "Running: sudo nixos-rebuild switch"
-sudo nixos-rebuild switch --flake "$DOTFILES_DIR#default"
+sudo nixos-rebuild switch --flake .
 
 if [ -f "$HOME/.ssh/id_ed25519.pub" ]; then
   echo

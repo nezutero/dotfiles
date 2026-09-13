@@ -17,6 +17,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  programs.dconf.enable = true;
 
   time.timeZone = "Europe/Paris";
 

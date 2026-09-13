@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrainsMono Nerd Font:size=15.5";
+        font = "JetBrainsMono Nerd Font:size=16.5";
         pad = "1x1";
       };
       scrollback = {

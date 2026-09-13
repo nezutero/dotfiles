@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #
 # manga_prep.sh
 #

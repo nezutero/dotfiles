@@ -13,11 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +24,6 @@
       nixpkgs,
       home-manager,
       zen-browser,
-      sops-nix,
       disko,
       ...
     }@inputs:
@@ -39,7 +33,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            sops-nix.nixosModules.sops
             ./hosts/default/configuration.nix
             home-manager.nixosModules.home-manager
             {

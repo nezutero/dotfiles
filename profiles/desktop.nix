@@ -63,6 +63,9 @@
   # $ nix search wget
   # IF SWAY: swayfx wlsunset swayidle swaybg swaylock
   environment.systemPackages = with pkgs; [
+    sway
+    swayidle
+    wlsunset
     neovim
     clang
     clang-tools
@@ -75,14 +78,11 @@
     zbar
     libnotify
     wtype
-    hyprlock
-    hyprpaper
     foot
     (pass.withExtensions (exts: with exts; [ pass-otp ]))
     jq
     dunst
     btop
-    hyprsunset
     wl-clipboard
     grim
     slurp
@@ -102,8 +102,6 @@
     bat
     rofi-bluetooth
     jetbrains-mono
-    gruvbox-material-gtk-theme
-    gruvbox-plus-icons
     zsh
     fd
     adwaita-icon-theme
@@ -114,20 +112,12 @@
     cheese
     jdk
     jdt-language-server
-    python3
-    python311Packages.python-lsp-server
-    python311Packages.pylint
-    python311Packages.black
-    python311Packages.pylsp-mypy
     thunderbird
     protonmail-bridge
     vesktop
-    weechat
-    spotify
     dig
     android-tools
     gdb
-    calibre
     zathura
     obs-studio
     onlyoffice-desktopeditors
@@ -141,12 +131,15 @@
     cargo
     gnupg
     pinentry-curses
+    hyprpaper
+    hyprsunset
+    hyprlock
+    hypridle
     telegram-desktop
     signal-desktop
     nodejs
     go
     unzip
-    rmpc
     killall
   ];
 
