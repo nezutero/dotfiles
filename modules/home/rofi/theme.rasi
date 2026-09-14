@@ -28,7 +28,7 @@ listview {
 }
 window {
     transparency: "real";
-    width: 600px;
+    width: 500px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: @w-border;
