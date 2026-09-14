@@ -3,8 +3,8 @@ set $term foot
 set $fileManager yazi
 set $menu rofi -show drun
 set $editor nvim
-set $browser zen-browser
-set $player $term --title rmpc -e sh -c "rmpc update && rmpc"
+set $browser zen-beta
+set $player $term --title rmpc -e -c "rmpc update && rmpc"
 
 output eDP-1 resolution 1920x1080@60Hz position 0,0 scale 1.2
 output eDP-1 bg ~/Pictures/walls/your_name_sky1.jpg fill
@@ -131,19 +131,19 @@ bindsym $mod+Print exec FILE=$HOME/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%
     grim -g "$(slurp)" "$FILE" && \
     dunstify -a "Screenshot" -u low -r 9002 -t 1500 "Screenshot Saved" "$FILE"
 
-bindsym --locked XF86MonBrightnessUp   exec backlight.sh up
-bindsym --locked XF86MonBrightnessDown exec backlight.sh down
-bindsym $mod+XF86MonBrightnessUp   exec backlight.sh max
-bindsym $mod+XF86MonBrightnessDown exec backlight.sh min
-bindsym Ctrl+XF86MonBrightnessUp   exec temperature.sh up
-bindsym Ctrl+XF86MonBrightnessDown exec temperature.sh down
+bindsym --locked XF86MonBrightnessUp   exec backlight up
+bindsym --locked XF86MonBrightnessDown exec backlight down
+bindsym $mod+XF86MonBrightnessUp   exec backlight max
+bindsym $mod+XF86MonBrightnessDown exec backlight min
+bindsym Ctrl+XF86MonBrightnessUp   exec temperature up
+bindsym Ctrl+XF86MonBrightnessDown exec temperature down
 
-bindsym --locked XF86AudioRaiseVolume exec volume.sh up
-bindsym --locked XF86AudioLowerVolume exec volume.sh down
-bindsym --locked XF86AudioMute        exec volume.sh mute
+bindsym --locked XF86AudioRaiseVolume exec volume up
+bindsym --locked XF86AudioLowerVolume exec volume down
+bindsym --locked XF86AudioMute        exec volume mute
 bindsym --locked XF86AudioMicMute     exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 
-bindsym XF86Favorites exec rofi -show power-menu -modi power-menu:rofi-power-menu.sh
+bindsym XF86Favorites exec rofi -show power-menu -modi power-menu:rofi-power-menu
 bindsym XF86Tools     exec $term -D $HOME/dotfiles -e $editor .
 
 include /etc/sway/config.d/*

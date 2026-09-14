@@ -17,6 +17,22 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.systemd.enable = true;
+
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+    priority = 100;
+  };
+
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 17 * 1024;
+      options = [ "pri=10" ];
+    }
+  ];
+
   programs.dconf.enable = true;
 
   time.timeZone = "Europe/Paris";
