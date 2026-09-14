@@ -43,4 +43,5 @@
       };
     };
   };
+  stylix.targets.foot.enable = false;
 }

@@ -150,4 +150,9 @@
 
     style = builtins.readFile ./style.css;
   };
+
+  stylix.targets.waybar = {
+    colors.enable = false;
+    fonts.enable = false;
+  };
 }

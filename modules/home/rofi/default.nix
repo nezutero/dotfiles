@@ -5,7 +5,7 @@
     extraConfig = {
       modi = "drun";
       show-icons = false;
-      display-drun = " ";
+      display-drun = ">";
     };
   };
 

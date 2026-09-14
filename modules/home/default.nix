@@ -3,7 +3,6 @@
 {
   imports = [
     ./git.nix
-    ./gtk.nix
     ./ssh.nix
     ./xdg.nix
     ./shell.nix
@@ -15,12 +14,12 @@
     ./fastfetch.nix
     ./scripts.nix
     ./swaylock.nix
+    ./nvim.nix
 
     ./waybar
     ./sway
-    ./nvim
-    ./hyprland
     ./rofi
+    ./hyprland
     ./zen
   ];
 }

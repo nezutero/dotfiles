@@ -17,6 +17,12 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix.url = "github:nix-community/stylix";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
@@ -35,6 +41,7 @@
           modules = [
             ./hosts/default/configuration.nix
             home-manager.nixosModules.home-manager
+            inputs.stylix.nixosModules.stylix
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;

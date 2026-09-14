@@ -3,7 +3,7 @@
 {
   services.dunst = {
     enable = true;
-    
+
     settings = {
       global = {
         font = "JetBrainsMono Nerd Font 12";
@@ -35,10 +35,7 @@
         horizontal_padding = 15;
         text_icon_padding = 0;
         frame_width = 1;
-        highlight = "#c5c9c5";
-        frame_color = "#c5c9c5";
         gap_size = 10;
-        separator_color = "frame";
 
         sort = true;
         word_wrap = true;
@@ -83,29 +80,21 @@
       };
 
       urgency_low = {
-        background = "#000000";
-        foreground = "#c5c9c5";
         timeout = 0;
       };
 
       urgency_normal = {
-        background = "#000000";
-        foreground = "#c5c9c5";
         timeout = 5;
         override_pause_level = 30;
       };
 
       urgency_critical = {
-        background = "#900000";
-        foreground = "#c5c9c5";
-        frame_color = "#ff0000";
         timeout = 0;
         override_pause_level = 60;
       };
 
       backlight = {
         appname = "Backlight";
-        highlight = "#c5c9c5";
       };
 
       volume = {
@@ -113,4 +102,6 @@
       };
     };
   };
+
+  stylix.targets.dunst.fonts.enable = false;
 }

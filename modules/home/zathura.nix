@@ -5,8 +5,6 @@
     enable = true;
     options = {
       recolor = true;
-      recolor-darkcolor = "#ddd";
-      recolor-lightcolor = "#000000";
       selection-clipboard = "clipboard";
       copy-select = false;
       selection-notification = false;

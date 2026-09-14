@@ -3,10 +3,9 @@
 {
   imports = [
     ../modules/nixos/nix.nix
-    ../modules/nixos/fonts.nix
     ../modules/nixos/maintenance.nix
     ../modules/nixos/services.nix
-    #../modules/nixos/nextdns.nix
+    ../modules/nixos/stylix.nix
   ];
 
   users.users."nezutero" = {
