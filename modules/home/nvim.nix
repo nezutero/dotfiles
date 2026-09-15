@@ -191,6 +191,7 @@
         zig.enable = true;
         markdown.enable = true;
         lua.enable = true;
+        python.enable = true;
         nix = {
           enable = true;
           lsp.servers = [ "nil" ];
@@ -220,13 +221,13 @@
             ];
             prompt_prefix = " > ";
             layout_strategy = "horizontal";
+            sorting_strategy = "ascending";
             layout_config = {
               width = 0.6;
               height = 0.6;
+              horizontal.prompt_position = "bottom";
             };
           };
-          prompt_position = "bottom";
-          sorting_strategy = "ascending";
           pickers.find_files = {
             hidden = true;
             find_command = [
@@ -242,6 +243,21 @@
           };
         };
       };
+
+      extraPlugins = {
+        kanagawa = {
+          package = pkgs.vimPlugins.kanagawa-nvim;
+          setup = ''
+            require("kanagawa").setup({
+              theme = "wave",
+            })
+          '';
+        };
+      };
+
+      luaConfigRC.kanagawa = ''
+        vim.cmd.colorscheme("kanagawa")
+      '';
 
       statusline.lualine = {
         enable = true;
@@ -266,6 +282,7 @@
       treesitter.enable = true;
       git.gitsigns.enable = true;
       utility.undotree.enable = true;
+
       luaConfigRC.telescopeTheme = ''
         vim.cmd([[
           hi TelescopeNormal guibg=NONE ctermbg=NONE
@@ -292,6 +309,7 @@
           hi VertSplit guibg=NONE ctermbg=NONE
         ]])
       '';
+
       luaConfigRC.transparency = ''
         local function apply_transparency()
           local groups = {
@@ -331,5 +349,5 @@
     };
   };
 
-  stylix.targets.nvf.enable = true;
+  stylix.targets.nvf.enable = false;
 }
