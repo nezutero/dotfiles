@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   hardware.bluetooth.enable = false;
   services.blueman.enable = false;
@@ -5,5 +6,6 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-curses;
   };
 }
