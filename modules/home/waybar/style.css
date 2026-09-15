@@ -35,7 +35,7 @@
     font-family: "JetBrainsMono Nerd Font";
     font-size: 12px;
     font-weight: bold;
-    border-top: 0.5px solid #3c3836
+    border-top: 1px solid #3c3836
 }
 
 #battery,
@@ -169,7 +169,7 @@
 }
 
 /* IF SWAY -> button.focused */
-#workspaces button.focused {
+#workspaces button.active {
     color: #000000;
     background-color: #c5c9c5;
 }

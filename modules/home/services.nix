@@ -1,39 +1,49 @@
 { pkgs, ... }:
 {
-  services.swayidle =
-    let
-      lock = "${pkgs.swaylock}/bin/swaylock --daemonize";
-      display = status: "swaymsg 'output * power ${status}'";
-    in
-    {
-      enable = true;
-      systemdTargets = [ "graphical-session.target" ];
-      timeouts = [
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      splash = false;
+      wallpaper = [
         {
-          timeout = 300;
-          command = lock;
-        }
-        {
-          timeout = 330;
-          command = display "off";
-          resumeCommand = display "on";
-        }
-        {
-          timeout = 600;
-          command = "systemctl suspend";
-        }
-      ];
-      events = [
-        {
-          event = "before-sleep";
-          command = lock;
-        }
-        {
-          event = "lock";
-          command = lock;
+          monitor = "eDP-1";
+          path = "/home/nezutero/Pictures/walls/your_name_sky1.jpg";
+          fit_mode = "cover";
         }
       ];
     };
+  };
+
+  services.hypridle = {
+    enable = true;
+    settings = {
+      general = {
+        lock_cmd = "hyprlock";
+        before_sleep_cmd = "hyprlock";
+        after_sleep_cmd = "hyprctl dispatch dpms on";
+      };
+      listener = [
+        {
+          timeout = 600;
+          on-timeout = "brightnessctl -e4 -s set 25%";
+          on-resume = "brightnessctl -r";
+        }
+        {
+          timeout = 1200;
+          on-timeout = "hyprlock";
+        }
+        {
+          timeout = 1800;
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
+        }
+        {
+          timeout = 102400; # see note above — likely meant 2400 (40min)
+          on-timeout = "systemctl suspend";
+        }
+      ];
+    };
+  };
 
   services.tlp = {
     enable = true;

@@ -13,13 +13,12 @@
     ./zathura.nix
     ./fastfetch.nix
     ./scripts.nix
-    ./swaylock.nix
     ./nvim.nix
+    ./hyprland.nix
+    ./hyprlock.nix
 
     ./waybar
-    ./sway
     ./rofi
-    ./hyprland
     ./zen
   ];
 }

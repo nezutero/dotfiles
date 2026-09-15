@@ -62,9 +62,6 @@
   # $ nix search wget
   # IF SWAY: swayfx wlsunset swayidle swaybg swaylock
   environment.systemPackages = with pkgs; [
-    sway
-    swayidle
-    wlsunset
     neovim
     clang
     clang-tools

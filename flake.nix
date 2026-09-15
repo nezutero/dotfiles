@@ -47,6 +47,7 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users.nezutero = import ./hosts/default/home.nix;
+              home-manager.backupFileExtension = "hm-backup";
             }
           ];
         };

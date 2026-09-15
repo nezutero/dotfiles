@@ -11,7 +11,7 @@
         spacing = 1;
 
         modules-left = [
-          "sway/workspaces"
+          "hyprland/workspaces"
           "clock"
         ];
 
@@ -22,7 +22,7 @@
           "memory"
           "cpu"
           "temperature"
-          "sway/language"
+          "hyprland/language"
           "network"
           # "bluetooth"
           "pulseaudio"
@@ -30,9 +30,9 @@
           "battery"
         ];
 
-        "sway/language" = {
-          format = "  {shortDescription}";
-          on-click = "swaymsg input type:keyboard xkb_switch_layout next";
+        "hyprland/language" = {
+          format-en = "  EN";
+          format-fr = "  FR";
         };
 
         clock = {
