@@ -180,7 +180,6 @@
       languages = {
         enableTreesitter = true;
         enableFormat = false;
-        enableDAP = true;
 
         bash.enable = true;
         clang.enable = true;
@@ -200,7 +199,6 @@
         };
       };
 
-      debugger.nvim-dap.ui.enable = true;
       autocomplete.nvim-cmp.enable = true;
 
       telescope = {

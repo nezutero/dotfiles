@@ -75,6 +75,7 @@
     libnotify
     wtype
     foot
+    kitty
     (pass.withExtensions (exts: with exts; [ pass-otp ]))
     jq
     dunst
@@ -107,7 +108,6 @@
     git
     cheese
     jdk21
-
     jdt-language-server
     thunderbird
     protonmail-bridge
