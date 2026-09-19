@@ -181,23 +181,27 @@
       languages = {
         enableTreesitter = true;
         enableFormat = false;
+        enableDAP = true;
 
         bash.enable = true;
         clang.enable = true;
         go.enable = true;
         html.enable = true;
         css.enable = true;
+        java.enable = true;
         rust.enable = true;
         zig.enable = true;
         markdown.enable = true;
         lua.enable = true;
         python.enable = true;
+        typescript.enable = true;
         nix = {
           enable = true;
           lsp.servers = [ "nil" ];
         };
       };
 
+      debugger.nvim-dap.ui.enable = true;
       autocomplete.nvim-cmp.enable = true;
 
       telescope = {
@@ -244,20 +248,12 @@
         };
       };
 
-      extraPlugins = {
-        kanagawa = {
-          package = pkgs.vimPlugins.kanagawa-nvim;
-          setup = ''
-            require("kanagawa").setup({
-              theme = "wave",
-            })
-          '';
-        };
+      theme = {
+        enable = true;
+        name = "tokyonight";
+        style = "night";
+        transparent = true;
       };
-
-      luaConfigRC.kanagawa = ''
-        vim.cmd.colorscheme("kanagawa")
-      '';
 
       statusline.lualine = {
         enable = true;
@@ -282,70 +278,6 @@
       treesitter.enable = true;
       git.gitsigns.enable = true;
       utility.undotree.enable = true;
-
-      luaConfigRC.telescopeTheme = ''
-        vim.cmd([[
-          hi TelescopeNormal guibg=NONE ctermbg=NONE
-          hi TelescopePromptNormal guibg=NONE ctermbg=NONE
-          hi TelescopeResultsNormal guibg=NONE ctermbg=NONE
-          hi TelescopePreviewNormal guibg=NONE ctermbg=NONE
-
-          hi TelescopeBorder guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-          hi TelescopePromptBorder guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-          hi TelescopeResultsBorder guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-          hi TelescopePreviewBorder guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-
-          hi TelescopeTitle guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-          hi TelescopePromptTitle guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-          hi TelescopeResultsTitle guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-          hi TelescopePreviewTitle guifg=Grey guibg=NONE ctermfg=Grey ctermbg=NONE
-
-          hi TelescopePromptPrefix guifg=Orange guibg=NONE ctermfg=Yellow ctermbg=NONE
-          hi TelescopeMatching guifg=Orange gui=bold cterm=bold
-          hi TelescopeSelection guifg=White guibg=NONE gui=bold
-          hi TelescopeSelectionCaret guifg=Orange guibg=NONE gui=bold
-          hi TelescopeMultiSelection guifg=Grey guibg=NONE
-
-          hi VertSplit guibg=NONE ctermbg=NONE
-        ]])
-      '';
-
-      luaConfigRC.transparency = ''
-        local function apply_transparency()
-          local groups = {
-            "Normal", "NormalFloat", "NormalNC", "SignColumn",
-            "LineNr", "LineNrAbove", "LineNrBelow", "CursorLineNr",
-            "EndOfBuffer", "MsgArea", "MsgSeparator",
-            "StatusLine", "StatusLineNC", "FoldColumn",
-            "CursorLine", "CursorLineSign", "CursorLineFold", "CursorColumn",
-            "WinSeparator", "VertSplit",
-          }
-          for _, group in ipairs(groups) do
-            vim.api.nvim_set_hl(0, group, { bg = "none" })
-          end
-
-          local sign_groups = {
-            "DiagnosticSignError", "DiagnosticSignWarn",
-            "DiagnosticSignInfo", "DiagnosticSignHint", "DiagnosticSignOk",
-          }
-          for _, group in ipairs(sign_groups) do
-            local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
-            if ok then
-              hl.bg = nil
-              vim.api.nvim_set_hl(0, group, hl)
-            end
-          end
-        end
-
-        apply_transparency()
-        vim.api.nvim_create_autocmd("ColorScheme", {
-          pattern = "*",
-          callback = apply_transparency,
-        })
-        vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-          callback = apply_transparency,
-        })
-      '';
     };
   };
 

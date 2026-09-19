@@ -106,7 +106,8 @@
     mpv
     git
     cheese
-    jdk
+    jdk21
+
     jdt-language-server
     thunderbird
     protonmail-bridge
@@ -126,6 +127,7 @@
     python3
     cargo
     gnupg
+    spotify
     pinentry-curses
     hyprpaper
     hyprsunset
