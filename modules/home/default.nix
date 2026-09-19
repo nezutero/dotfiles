@@ -16,7 +16,6 @@
     ./nvim.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./kitty.nix
 
     ./waybar
     ./rofi

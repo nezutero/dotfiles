@@ -75,7 +75,6 @@
     libnotify
     wtype
     foot
-    kitty
     (pass.withExtensions (exts: with exts; [ pass-otp ]))
     jq
     dunst
