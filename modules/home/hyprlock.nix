@@ -1,4 +1,3 @@
-# modules/home/hyprland/hyprlock.nix
 { ... }:
 {
   programs.hyprlock = {
