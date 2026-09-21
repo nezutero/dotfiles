@@ -258,3 +258,13 @@ user_pref("identity.fxaccounts.enabled", true);
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
+
+// Restore previous session on startup
+user_pref("browser.startup.page", 3);
+
+// Don't wipe anything on shutdown (master switch)
+user_pref("privacy.sanitize.sanitizeOnShutdown", false);
+user_pref("privacy.clearOnShutdown.history", false);
+
+// Make sure permanent private mode is off
+user_pref("browser.privatebrowsing.autostart", false);

@@ -17,6 +17,7 @@
     ./hyprland.nix
     ./hyprlock.nix
 
+    ./dwl
     ./waybar
     ./rofi
     ./zen

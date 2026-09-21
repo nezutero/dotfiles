@@ -14,6 +14,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "kvm"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
@@ -45,7 +46,7 @@
 
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'zsh -lc \"dwl -s dwl-start\"'";
         user = "greeter";
       };
     };
@@ -63,6 +64,13 @@
   # IF SWAY: swayfx wlsunset swayidle swaybg swaylock
   environment.systemPackages = with pkgs; [
     neovim
+    dwlb
+    swaylock
+    wlsunset
+    swayidle
+    swaylock
+    wbg
+    wmenu
     clang
     clang-tools
     glibc
@@ -117,6 +125,7 @@
     zathura
     obs-studio
     onlyoffice-desktopeditors
+    qemu
     tree
     docker
     distrobox
@@ -127,7 +136,7 @@
     cargo
     gnupg
     spotify
-    pinentry-curses
+    pinentry-gnome3
     hyprpaper
     hyprsunset
     hyprlock
@@ -151,6 +160,7 @@
     XCURSOR_SIZE = "24";
     PASSWORD_STORE_ENABLE_EXTENSIONS = "true";
     PASSWORD_STORE_EXTENSIONS_DIR = "/run/current-system/sw/lib/password-store/extensions/";
+    MOZ_ENABLE_WAYLAND = "1";
   };
 
   programs.zsh.enable = true;
