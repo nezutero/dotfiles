@@ -19,7 +19,7 @@ exec waybar
 exec dunst -config ~/.config/dunst/dunstrc
 exec clipmenud
 exec battery_notify.sh
-exec wlsunset -t 3500 -T 4000 # night->day transition
+exec wlsunset -T 6500 -t 3500 -S 04:00 -s 19:00 & # night->day transition
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
