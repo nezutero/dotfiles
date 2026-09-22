@@ -39,14 +39,12 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  programs.hyprland.enable = true;
-
   services.greetd = {
     enable = true;
 
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'zsh -lc \"dwl -s dwl-start\"'";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
         user = "greeter";
       };
     };
@@ -64,13 +62,11 @@
   # IF SWAY: swayfx wlsunset swayidle swaybg swaylock
   environment.systemPackages = with pkgs; [
     neovim
-    dwlb
+    sway
+    swayidle
+    swaybg
     swaylock
     wlsunset
-    swayidle
-    swaylock
-    wbg
-    wmenu
     clang
     clang-tools
     glibc
@@ -117,7 +113,6 @@
     jdk21
     jdt-language-server
     thunderbird
-    protonmail-bridge
     dig
     android-tools
     gdb
@@ -136,10 +131,6 @@
     gnupg
     spotify
     pinentry-gnome3
-    hyprpaper
-    hyprsunset
-    hyprlock
-    hypridle
     telegram-desktop
     signal-desktop
     nodejs

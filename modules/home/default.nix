@@ -16,7 +16,8 @@
     ./nvim.nix
     ./swaylock.nix
 
-    ./dwl
+    ./waybar
+    ./sway
     ./rofi
     ./zen
   ];
