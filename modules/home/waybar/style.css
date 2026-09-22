@@ -33,7 +33,7 @@
     background-color: #000000;
     color: #c5c9c5;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     border-top: 0.5px solid #3c3836
 }
@@ -47,7 +47,7 @@
 #pulseaudio,
 #temperature,
 #disk,
-#language,
+#custom-language,
 #bluetooth,
 #backlight {
     min-height: 0;
@@ -156,7 +156,7 @@
     border-radius: 4px;
     background-color: #000000;
     color: #c5c9c5;
-    font-size: 11px;
+    font-size: 12px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
 }

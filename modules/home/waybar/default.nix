@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   programs.waybar = {
     enable = true;
@@ -22,7 +20,7 @@
           "memory"
           "cpu"
           "temperature"
-          "sway/language"
+          "custom/language"
           "network"
           # "bluetooth"
           "pulseaudio"
@@ -30,8 +28,10 @@
           "battery"
         ];
 
-        "sway/language" = {
-          format = "  {shortDescription}";
+        "custom/language" = {
+          exec = "swaymsg -t get_inputs -r | jq -r '[.[]|select(.type==\"keyboard\")][0].xkb_active_layout_name | .[0:2] | ascii_upcase'";
+          interval = 1;
+          format = "  {}";
           on-click = "swaymsg input type:keyboard xkb_switch_layout next";
         };
 
