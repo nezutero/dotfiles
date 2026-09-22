@@ -36,6 +36,7 @@ SEP=" ^fg($DIM)│^fg($FG) "
 # Battery:            󰂎 / 󰁻 / 󰁾 / 󰂀 / 󰁹
 # Charging:           
 # Plugged:            
+# Keyboard:             
 
 # CAUTION: ^ is dwlb's escape character. If a glyph you paste contains one,
 # write it as ^^ or the rest of the line is parsed as a command.
@@ -57,6 +58,9 @@ I_MIC_MUTE=" "
 I_BL_LOW="󰃞"
 I_BL_MED="󰃟"
 I_BL_HIGH="󰃠"
+
+I_LANG=" "
+LANG_FILE="${XDG_RUNTIME_DIR:-/tmp}/dwl-layout"
 
 I_BT="󰂯"
 I_BT_CONN="󰂱"
@@ -175,6 +179,27 @@ mod_temp() {
         "$(col "$t" 70 80)" \
         "$I_TEMP" \
         "$t"
+}
+
+# dwl writes "<index> <xkb layout name>" here on every layout change.
+# Index 0 is the first entry of xkb_rules.layout in config.h ("us,ca").
+# Falls back to 0 when the file is missing (no toggle yet) or momentarily
+# empty - fopen(.., "w") truncates before it writes, so a read can land in
+# that window.
+mod_lang() {
+    idx=0
+    if [ -r "$LANG_FILE" ]; then
+        idx=$(cut -d' ' -f1 "$LANG_FILE" 2>/dev/null || echo 0)
+    fi
+    case $idx in
+        '' | *[!0-9]*) idx=0 ;;
+    esac
+    case $idx in
+        0) l=EN ;;
+        1) l=FR ;;
+        *) l=$idx ;;
+    esac
+    printf '%s %s' "$I_LANG" "$l"
 }
 
 mod_net() {
@@ -416,6 +441,7 @@ while :; do
     add "$(mod_temp)"
     add "$(mod_net)"
     add "$bt"
+    add "$(mod_lang)"
     add "$(mod_vol)"
     add "$(mod_mic)"
     add "$(mod_bl)"

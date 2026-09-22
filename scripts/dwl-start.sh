@@ -31,6 +31,8 @@
     # wlr-gamma-control protocol, which stock dwl does not implement. There is
     # a gamma-control patch in dwl-patches - apply it before enabling this.
     # wlsunset -t 4000 -T 6500 &
+    wlsunset -T 6500 -t 3500 -S 04:00 -s 19:00 & 
+
 
     # ---- wait for dwlb's socket before talking to it ----
     n=0
@@ -48,7 +50,7 @@
     # area into a writable text element, so this both removes the title and
     # gives the clock a left-hand home. Costs one dwlb call per second.
     while :; do
-        dwlb -title all "$(LC_TIME=en_GB.UTF-8 date '+%H:%M:%S :: %e %B, %A :: (%d/%m/%y)')"
+        dwlb -title all "^fg(727169)│^fg() $(LC_TIME=en_GB.UTF-8 date '+%H:%M:%S :: %e %B, %A :: (%d/%m/%y)')"
         sleep 1
     done &
 } </dev/null &

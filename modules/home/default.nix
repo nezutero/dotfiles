@@ -14,11 +14,9 @@
     ./fastfetch.nix
     ./scripts.nix
     ./nvim.nix
-    ./hyprland.nix
-    ./hyprlock.nix
+    ./swaylock.nix
 
     ./dwl
-    ./waybar
     ./rofi
     ./zen
   ];

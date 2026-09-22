@@ -10,6 +10,8 @@
                         ((hex >> 8) & 0xFF) / 255.0f, \
                         (hex & 0xFF) / 255.0f }
 
+static const uint32_t cursor_hide_timeout = 3000;
+
 /* appearance */
 static const int sloppyfocus               = 1;  /* = your follow_mouse = 1 */
 static const int bypass_surface_visibility = 0;

@@ -118,7 +118,6 @@
     jdt-language-server
     thunderbird
     protonmail-bridge
-    vesktop
     dig
     android-tools
     gdb
