@@ -275,6 +275,7 @@
       treesitter.enable = true;
       git.gitsigns.enable = true;
       utility.undotree.enable = true;
+      visuals.indent-blankline.enable = true;
     };
   };
 

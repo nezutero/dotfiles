@@ -14,7 +14,7 @@
         style = "block";
       };
       colors-dark = {
-        alpha = "0.8";
+        alpha = "0.9";
         background = "000000";
         foreground = "c5c9c5";
         # normal colors

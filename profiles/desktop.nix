@@ -62,6 +62,7 @@
   # IF SWAY: swayfx wlsunset swayidle swaybg swaylock
   environment.systemPackages = with pkgs; [
     neovim
+    vscodium
     sway
     swayidle
     swaybg
