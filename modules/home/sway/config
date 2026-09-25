@@ -18,7 +18,7 @@ exec systemctl --user start graphical-session.target
 exec waybar
 exec dunst -config ~/.config/dunst/dunstrc
 exec clipmenud
-exec battery_notify.sh
+exec battery_notify
 exec wlsunset -T 6500 -t 3500 -S 04:00 -s 19:00 & # night->day transition
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
@@ -80,7 +80,7 @@ bindsym $mod+N      exec $term -D $HOME/notes -e $editor .
 # no need to force-focus rofi like hyprctl dispatch focuswindow did —
 # sway focuses new windows by default
 bindsym $mod+space exec $menu
-bindsym $mod+P exec rofipass.sh
+bindsym $mod+P exec rofipass
 bindsym $mod+C exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym $mod+A exec GDK_BACKEND=x11 audacity
 bindsym $mod+S exec $player
