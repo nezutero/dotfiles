@@ -252,29 +252,9 @@
         transparent = true;
       };
 
-      statusline.lualine = {
-        enable = true;
-        setupOpts.theme = {
-          sections = {
-            lualine_a = [ "mode" ];
-            lualine_b = [
-              "branch"
-              "diff"
-              "diagnostics"
-            ];
-            lualine_x = [
-              "encoding"
-              "filetype"
-            ];
-            lualine_y = [ "lsp_status" ];
-            lualine_z = [ "progress" ];
-          };
-        };
-      };
-
+      mini.statusline.enable = true;
       git.gitsigns.enable = true;
       utility.undotree.enable = true;
-      # visuals.indent-blankline.enable = true;
     };
   };
 
