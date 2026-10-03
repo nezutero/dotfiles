@@ -37,7 +37,7 @@
 
         clock = {
           locale = "en_GB.UTF-8";
-          format = "{:L%H:%M:%S :: %e %B, %A :: (%d/%m/%y)}";
+          format = "{:L%H:%M:%S ::%e %B, %A :: (%d/%m/%y)}";
           format-alt = "{:L%H:%M:%S :: %e %B, %A}";
           tooltip-format = "<big>{:L%Y %B}</big>\n<tt>{calendar}</tt>";
           today-format = "<b>{}</b>";

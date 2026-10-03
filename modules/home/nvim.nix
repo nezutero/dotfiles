@@ -34,6 +34,7 @@
         incsearch = true;
         scrolloff = 8;
         updatetime = 50;
+        signcolumn = "number";
         colorcolumn = "90";
         textwidth = 100;
         breakindent = true;
@@ -159,6 +160,7 @@
           signatureHelp = "<C-k>";
         };
         trouble.enable = true;
+        servers.nil.settings.nil.nix.flake.autoArchive = true;
       };
 
       diagnostics = {
