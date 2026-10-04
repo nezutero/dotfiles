@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -17,7 +17,6 @@
       "kvm"
     ];
     shell = pkgs.zsh;
-    packages = with pkgs; [ ];
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -55,6 +54,11 @@
     alsa.enable = true;
     pulse.enable = true;
     wireplumber.enable = true;
+  };
+
+  xdg.portal.wlr.settings.screencast = {
+    output_name = "eDP-1";
+    chooser_type = "none";
   };
 
   # List packages installed in system profile. To search, run:
@@ -154,6 +158,7 @@
     MOZ_ENABLE_WAYLAND = "1";
   };
 
+  programs.sway.enable = true;
   programs.zsh.enable = true;
 
   programs.nix-ld.enable = true;
