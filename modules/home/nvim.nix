@@ -1,5 +1,4 @@
 {
-  config,
   inputs,
   ...
 }:
@@ -29,7 +28,6 @@
         swapfile = false;
         backup = false;
         undofile = true;
-        undodir = "${config.home.homeDirectory}/.nvim/undodir";
         hlsearch = false;
         incsearch = true;
         scrolloff = 8;
@@ -255,7 +253,10 @@
       };
 
       mini.statusline.enable = true;
-      git.gitsigns.enable = true;
+      mini.git.enable = true;
+      mini.diff.enable = true;
+
+      # git.gitsigns.enable = true;
       utility.undotree.enable = true;
     };
   };

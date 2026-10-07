@@ -115,6 +115,7 @@
     mpv
     git
     cheese
+    kdePackages.kdenlive
     jdk21
     jdt-language-server
     thunderbird
