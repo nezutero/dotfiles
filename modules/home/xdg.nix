@@ -20,7 +20,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "application/pdf" = "zathura.desktop";
+      "application/pdf" = "zen-beta.desktop";
 
       "image/png" = "imv.desktop";
       "image/jpeg" = "imv.desktop";

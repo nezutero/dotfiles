@@ -114,7 +114,10 @@
     imv
     mpv
     git
-    cheese
+    zip
+    unzip
+    pandoc
+    typst
     kdePackages.kdenlive
     jdk21
     jdt-language-server
@@ -135,13 +138,11 @@
     python3
     cargo
     gnupg
-    spotify
     pinentry-gnome3
     telegram-desktop
     signal-desktop
     nodejs
     go
-    unzip
     killall
   ];
 
