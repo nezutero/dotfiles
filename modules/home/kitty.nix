@@ -7,7 +7,12 @@
       size = 16.5;
     };
 
+    shellIntegration.mode = "no-rc no-cursor";
+
     settings = {
+      enable_audio_bell = false;
+      text_composition_strategy = "legacy";
+
       window_padding_width = 1;
 
       scrollback_lines = 10000;
@@ -15,7 +20,7 @@
 
       cursor_shape = "block";
 
-      background_opacity = "0.8";
+      background_opacity = "0.9";
       background = "#000000";
       foreground = "#c5c9c5";
 

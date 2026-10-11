@@ -1,5 +1,5 @@
 set $mod Mod4
-set $term foot
+set $term kitty
 set $fileManager yazi
 set $menu rofi -show drun
 set $editor nvim

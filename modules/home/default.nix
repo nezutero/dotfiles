@@ -15,6 +15,7 @@
     ./scripts.nix
     ./nvim.nix
     ./swaylock.nix
+    ./kitty.nix
 
     ./waybar
     ./sway
