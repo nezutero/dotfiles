@@ -114,7 +114,6 @@
     imv
     mpv
     git
-    kitty
     zip
     unzip
     pandoc
