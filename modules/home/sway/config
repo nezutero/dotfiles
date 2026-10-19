@@ -24,7 +24,7 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
 input "type:keyboard" {
-    xkb_layout "us,ca"
+    xkb_layout "us,ca,ru,ua"
     xkb_options "caps:escape,grp:alt_space_toggle"
 }
 input "type:touchpad" {
