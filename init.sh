@@ -2,7 +2,7 @@
 set -euo pipefail
 
 GIT_USER="nezutero"
-DOTFILES_GIT="https://codeberg.org/${GIT_USER}/dotfiles.git"
+DOTFILES_GIT="https://github.com/${GIT_USER}/dotfiles.git"
 DOTFILES_DIR="$HOME/dotfiles"
 BACKUP_ETC_NIXOS="/etc/nixos.bak"
 
@@ -59,7 +59,7 @@ read -r -p "Add the SSH key to your Git hosting, then press Enter to continue (C
 # switch dotfiles remote from HTTPS to SSH
 set -x
 
-git -C "$DOTFILES_DIR" remote set-url origin "git@codeberg.org:${GIT_USER}/dotfiles.git"
+git -C "$DOTFILES_DIR" remote set-url origin "git@github.com:${GIT_USER}/dotfiles.git"
 
 set +x
 
