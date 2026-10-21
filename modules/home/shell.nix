@@ -49,8 +49,6 @@
       mnt = "udisksctl mount -b /dev/sda1";
       umnt = "udisksctl unmount -b /dev/sda1";
       cdf = "cd /run/media/nezutero/KINGSTON";
-      ls = "eza";
-      cat = "bat";
     };
   };
 }

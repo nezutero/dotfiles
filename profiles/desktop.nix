@@ -103,8 +103,6 @@
     fastfetch
     imagemagick
     fzf
-    eza
-    bat
     rofi-bluetooth
     jetbrains-mono
     zsh
