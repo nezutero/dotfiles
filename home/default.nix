@@ -13,12 +13,16 @@
     ./zathura.nix
     ./fastfetch.nix
     ./scripts.nix
-    ./nvim.nix
     ./swaylock.nix
 
+    ./nvim
     ./waybar
     ./sway
     ./rofi
     ./zen
   ];
+
+  home.username = "nezutero";
+  home.homeDirectory = "/home/nezutero";
+  home.stateVersion = "26.05";
 }

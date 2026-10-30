@@ -1,8 +1,9 @@
 {
-  description = "NixOS Configuration";
+  description = "NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,53 +14,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     stylix.url = "github:nix-community/stylix";
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      zen-browser,
-      disko,
-      ...
-    }@inputs:
-    {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/default/configuration.nix
-            home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.nezutero = import ./hosts/default/home.nix;
-              home-manager.backupFileExtension = "hm-backup";
-            }
-          ];
-        };
 
-        server = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = [
-            disko.nixosModules.disko
-            ./hosts/server/configuration.nix
-          ];
-        };
+  outputs =
+    { nixpkgs, home-manager, ... }@inputs:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos/configuration.nix
+          home-manager.nixosModules.home-manager
+          inputs.stylix.nixosModules.stylix
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.nezutero = import ./home;
+            home-manager.backupFileExtension = "hm-backup";
+          }
+        ];
       };
     };
 }
