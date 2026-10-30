@@ -5,24 +5,18 @@
   ];
 
   home.activation.zenBrowser = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    ZEN_CONFIG="$HOME/.config/zen"
-    
-    # Exit gracefully if Zen hasn't been launched yet
-    if [ ! -d "$ZEN_CONFIG" ]; then
-      echo "Zen Browser config directory not found, skipping..."
-      exit 0
+    PROFILE=""
+    if [ -d "$HOME/.config/zen" ]; then
+      PROFILE=$(find "$HOME/.config/zen" -maxdepth 1 -type d -name "*.Default*" | head -n1)
     fi
-    
-    # Find the profile directory (*.Default* pattern)
-    PROFILE=$(find "$ZEN_CONFIG" -maxdepth 1 -type d -name "*.Default*" | head -n1)
-    
-    if [ -z "$PROFILE" ]; then
-      echo "Zen Browser profile not found, skipping..."
-      exit 0
+
+    if [ -n "$PROFILE" ]; then
+      mkdir -p "$PROFILE/chrome"
+      ln -sf ${./user.js} "$PROFILE/user.js"
+      ln -sf ${./chrome/userChrome.css} "$PROFILE/chrome/userChrome.css"
+      ln -sf ${./chrome/userContent.css} "$PROFILE/chrome/userContent.css"
+    else
+      echo "Zen profile not found (open Zen once, then rebuild); skipping"
     fi
-    
-    mkdir -p "$PROFILE/chrome"
-    ln -sf ${./user.js} "$PROFILE/user.js"
-    ln -sf ${./chrome/userChrome.css} "$PROFILE/chrome/userChrome.css"
   '';
 }
