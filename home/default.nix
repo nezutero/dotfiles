@@ -16,6 +16,7 @@
     ./swaylock.nix
 
     ./nvim
+    ./helix
     ./waybar
     ./sway
     ./rofi

@@ -172,6 +172,7 @@
     pinentry-gnome3
 
     # Programming
+    helix
     gcc
     gdb
     glibc
@@ -201,6 +202,7 @@
     imv
     mpv
     gimp
+    krita
     kdePackages.kdenlive
     obs-studio
 

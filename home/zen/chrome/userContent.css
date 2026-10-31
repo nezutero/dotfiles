@@ -1,4 +1,4 @@
-/* Dark PDFs in the built-in viewer */
+/* Dark PDFs in the built-in viewer
 .pdfViewer .page .canvasWrapper canvas {
-    filter: invert(90%) hue-rotate(180deg);
-}
+    filter: invert(95%) hue-rotate(180deg);
+} */
