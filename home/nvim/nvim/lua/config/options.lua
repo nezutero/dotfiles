@@ -4,7 +4,7 @@ local o = vim.opt
 
 -- Line numbers and guides
 o.number = true
-o.relativenumber = false
+o.relativenumber = true
 o.signcolumn = "number" -- diagnostic/git signs replace the line number
 o.colorcolumn = "90"
 o.textwidth = 100

@@ -14,7 +14,8 @@ vim.g.maplocalleader = ","
 require("config.options")    -- editor settings
 require("config.keymaps")    -- core keymaps (no plugins)
 require("config.plugins")    -- install + load plugins; everything below uses them
-require("config.ui")         -- colorscheme, statusline
+require("config.ui")         -- colorscheme
+require("config.statusline") -- mode, git, file, diagnostics, servers
 require("config.treesitter") -- syntax highlighting, indentation
 require("config.lsp")        -- language servers, diagnostics, format
 require("config.completion") -- nvim-cmp

@@ -2,7 +2,9 @@
 {
   fonts.packages = with pkgs; [
     noto-fonts-cjk-sans
+    noto-fonts
     jetbrains-mono
+    inter
   ];
 
   stylix = {
@@ -12,12 +14,12 @@
 
     fonts = {
       sansSerif = {
-        name = "JetBrainsMono Nerd Font Mono";
-        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "Inter";
+        package = pkgs.inter;
       };
       serif = {
-        name = "JetBrainsMono Nerd Font Mono";
-        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "Noto Serif";
+        package = pkgs.noto-fonts;
       };
       monospace = {
         name = "JetBrainsMono Nerd Font Mono";

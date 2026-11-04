@@ -3,5 +3,3 @@ require("tokyonight").setup({
     styles = { sidebars = "transparent", floats = "transparent" },
 })
 vim.cmd.colorscheme("tokyonight-night")
-
-require("mini.statusline").setup()
