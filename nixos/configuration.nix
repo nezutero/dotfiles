@@ -172,7 +172,6 @@
     pinentry-gnome3
 
     # Programming
-    helix
     gcc
     gdb
     glibc
@@ -201,15 +200,16 @@
     # Media
     imv
     mpv
-    gimp
-    krita
-    kdePackages.kdenlive
+    drawy
     obs-studio
 
     # Messaging
     thunderbird
     telegram-desktop
     signal-desktop
+
+    # Other
+    tor-browser
   ];
 
   system.stateVersion = "26.05";
