@@ -1,0 +1,34 @@
+# Options
+set recolor true
+set selection-clipboard clipboard
+set copy-select false
+set selection-notification false
+
+# Zoom
+map + zoom in
+map - zoom out
+map = zoom in
+map zi zoom in
+map zo zoom out
+map z0 zoom default
+
+# Navigation
+map j scroll down
+map k scroll up
+map h scroll left
+map l scroll right
+map gg goto top
+map G goto bottom
+
+# Scrolling
+map <C-d> scroll half-down
+map <C-u> scroll half-up
+map <C-f> scroll full-down
+map <C-b> scroll full-up
+
+# Other
+map r reload
+map R rotate rotate-cw
+map i recolor
+map f toggle_fullscreen
+map <Tab> toggle_index
