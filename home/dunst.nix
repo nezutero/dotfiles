@@ -1,0 +1,105 @@
+{
+  services.dunst = {
+    enable = true;
+
+    settings = {
+      global = {
+        font = "JetBrainsMono Nerd Font 12";
+        monitor = 0;
+        follow = "none";
+
+        width = "(300, 450)";
+        height = "(50, 200)";
+        origin = "top-right";
+        offset = "(10, 50)";
+        scale = 0;
+        notification_limit = 10;
+
+        progress_bar = true;
+        progress_bar_height = 10;
+        progress_bar_frame_width = 1;
+        progress_bar_min_width = 250;
+        progress_bar_max_width = 400;
+        progress_bar_corner_radius = 3;
+        progress_bar_corners = "all";
+
+        icon_corner_radius = 20;
+        icon_corners = "all";
+        indicate_hidden = true;
+        transparency = 0;
+
+        separator_height = 2;
+        padding = 10;
+        horizontal_padding = 15;
+        text_icon_padding = 0;
+        frame_width = 1;
+        gap_size = 10;
+
+        sort = true;
+        word_wrap = true;
+
+        line_height = 0;
+        markup = "full";
+        format = "<b>%s</b>\n%b";
+        alignment = "left";
+        vertical_alignment = "center";
+        show_age_threshold = 60;
+        ellipsize = "middle";
+        ignore_newline = false;
+
+        stack_duplicates = true;
+        hide_duplicate_count = false;
+        show_indicators = false;
+
+        enable_recursive_icon_lookup = true;
+        icon_theme = "Adwaita";
+        icon_position = "left";
+        min_icon_size = 32;
+        max_icon_size = 64;
+
+        sticky_history = true;
+        history_length = 20;
+
+        always_run_script = true;
+        corner_radius = 20;
+        corners = "all";
+        ignore_dbusclose = false;
+
+        force_xwayland = false;
+        force_xinerama = false;
+
+        mouse_left_click = "close_current";
+        mouse_middle_click = "do_action, close_current";
+        mouse_right_click = "close_all";
+      };
+
+      experimental = {
+        per_monitor_dpi = false;
+      };
+
+      urgency_low = {
+        timeout = 0;
+      };
+
+      urgency_normal = {
+        timeout = 5;
+        override_pause_level = 30;
+      };
+
+      urgency_critical = {
+        timeout = 0;
+        override_pause_level = 60;
+      };
+
+      backlight = {
+        appname = "Backlight";
+      };
+
+      volume = {
+        appname = "Volume";
+      };
+    };
+  };
+
+  stylix.targets.dunst.fonts.enable = false;
+}
